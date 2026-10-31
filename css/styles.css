@@ -206,6 +206,7 @@ a.more-link:hover h3{text-decoration:underline}
   .frame.fit{aspect-ratio:auto}
   .frame.fit img,.frame.fit svg{height:auto;width:100%}
   .dest-grid{grid-template-columns:1fr;row-gap:var(--s48)}
+  .dest{display:flex;flex-direction:column;grid-row:auto}
   .dest-shot{aspect-ratio:auto;padding-bottom:var(--s16)}
   .dest-shot img{height:auto;border-radius:var(--radius-s)}
 }

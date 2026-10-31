@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Third-party portal | Caterina Bustamante</title>
+<meta name="description" content="A portal where our clients' external counterparties could work on contracts inside the platform instead of over email.">
+<link rel="canonical" href="https://caterinabustamante.es/en/work/third-party-portal/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Third-party portal | Caterina Bustamante">
+<meta property="og:description" content="A portal where our clients' external counterparties could work on contracts inside the platform instead of over email.">
+<meta property="og:url" content="https://caterinabustamante.es/en/work/third-party-portal/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../../../css/styles.css">
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="site-head" aria-label="Main">
+    <a href="../../#work">Work</a>
+    <a class="name" href="../../">Caterina Bustamante</a>
+    <a href="../../#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap t-peri">
+<div class="intro">
+  <div class="intro-text">
+    <span class="label">Case study · Product design</span>
+    <h1 class="title">Third-party portal</h1>
+    <p class="lede">A portal where our clients' external counterparties could work on contracts inside the platform instead of over email. The squad designed the portal together. After launch, adoption was low. The diagnosis pointed to the password as the main barrier, so I proposed removing it and, within the squad, designed the new sign-in flow on my own.</p>
+  </div>
+  <dl class="meta">
+    <div><dt class="label">Year</dt><dd>2022</dd></div>
+    <div><dt class="label">Role</dt><dd>Product Designer, owner of the new sign-in flow</dd></div>
+    <div><dt class="label">Product</dt><dd>B2B contract lifecycle management (CLM) platform</dd></div>
+    <div><dt class="label">Team</dt><dd>Product squad: PM, frontend, backend, QA and CX</dd></div>
+    <div><dt class="label">Focus</dt><dd>Product design, user flows, usability testing</dd></div>
+    <div><dt class="label">Tools</dt><dd>Figma, Mixpanel, Hotjar</dd></div>
+  </dl>
+  <figure class="tile"><img src="../../../assets/img/third-party-portal/signin.webp" width="1120" height="840" alt="Passwordless sign-in screen: the contract name, buttons to continue with Google or Outlook, and the option to get a sign-in link by email."></figure>
+</div>
+
+<section>
+  <h2>The problem</h2>
+  <div class="prose"><p>Companies managed their contracts inside the platform, except for one part: negotiating and signing with their own counterparty, a client or a supplier. That still happened over email, with no history or traceability. User interviews confirmed the pattern.</p></div>
+  <div class="eco" role="img" aria-label="Before, the counterparty stayed outside the platform and communicated by email. After, the counterparty enters the third-party portal inside the platform.">
+    <div class="eco-row">
+      <span class="label">Before</span>
+      <div class="eco-line">
+        <div class="node solid">Client company</div>
+        <div class="link"></div>
+        <div class="node">CLM platform</div>
+        <div class="link mail"><span class="label">Email</span></div>
+        <div class="node out">External counterparty</div>
+      </div>
+    </div>
+    <div class="eco-row">
+      <span class="label">After</span>
+      <div class="eco-line after">
+        <div class="node solid">Client company</div>
+        <div class="link"></div>
+        <div class="zone">
+          <div class="node">CLM platform</div>
+          <div class="link"></div>
+          <div class="node solid">Third-party portal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Two users</h2>
+  <div class="prose"><p>The portal had a different user from the main product. An occasional user didn't need the CLM's tools, which were built for daily use.</p></div>
+  <div class="scroll">
+    <table class="cmp">
+      <thead><tr><th scope="col"></th><th scope="col">Internal user</th><th scope="col">External user</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Frequency</th><td>Daily</td><td>Occasional</td></tr>
+        <tr><th scope="row">Goal</th><td>Manage the full contract lifecycle</td><td>Review one specific document</td></tr>
+        <tr><th scope="row">Needs</th><td>The full CLM</td><td>Only what that document requires</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose"><p><span class="label k">Decision</span>In the squad we started from the CLM flows and cut them down to what the external user needed. Sign-up and sign-in, however, copied the CLM's. At the time, changing them didn't seem necessary. That is the access flow I later redesigned.</p></div>
+  <figure class="shot">
+    <div class="panel"><img src="../../../assets/img/third-party-portal/list.webp" width="1120" height="840" alt="List of pending documents with the single contract view on top of it." loading="lazy"></div>
+    <figcaption>Interface recreated for illustration.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Process</h2>
+  <ol class="steps">
+    <li><span class="label">01</span><span>User interviews</span></li>
+    <li><span class="label">02</span><span>Scope definition</span></li>
+    <li><span class="label">03</span><span>Wireframes and prototype</span></li>
+    <li><span class="label">04</span><span>Usability testing</span></li>
+    <li><span class="label">05</span><span>Launch</span></li>
+    <li class="turn"><span class="label">Low adoption after launch</span></li>
+    <li><span class="label">06</span><span>Diagnosis with Mixpanel and Hotjar</span></li>
+    <li><span class="label">07</span><span>Sign-in redesign: SSO and magic link</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Diagnosis</h2>
+  <div class="prose"><p>Few external users signed in to the portal, and fewer came back. The team presented the Mixpanel data in a meeting, and it showed where people dropped off. I reviewed Hotjar to understand why.</p></div>
+  <div class="pairs">
+    <div><span class="label">Mixpanel</span><h3>Where</h3><p>Drop-off was concentrated at sign-up and sign-in.</p></div>
+    <div><span class="label">Hotjar</span><h3>Why</h3><p>Users requested a password reset or abandoned the process.</p></div>
+  </div>
+  <div class="prose"><p>For an occasional user, the password was the main barrier to entry.</p></div>
+</section>
+
+<section>
+  <h2>No password</h2>
+  <div class="prose">
+    <p>With that data, I proposed removing the password. Users sign in with a magic link, a tokenized link sent to their email, or with SSO, using their Google or Outlook account.</p>
+    <p>There are two methods because SSO isn't available for every email provider. The magic link covers those cases.</p>
+  </div>
+  <div class="flows">
+    <svg class="flow" viewBox="30 70 620 870" role="img" aria-label="Sign-in flow before: seven steps, two decisions and a possible drop-off" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="aha" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs><text class="tt" x="40" y="100">Before</text>
+<text class="lb" x="640" y="100" text-anchor="end">4+ STEPS · WITH PASSWORD</text>
+<line x1="40" y1="116.5" x2="640" y2="116.5" style="stroke:var(--hair)"/>
+<rect x="152.0" y="156" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="240" y="180.0" fill="#ffffff" text-anchor="middle">Gets an invitation</text>
+<text class="nd" x="240" y="198.0" fill="#ffffff" text-anchor="middle">by email</text>
+<path d="M240,212 L240,276" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<polygon points="240,276 320,320 240,364 160,320" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="240" y="316.0" fill="currentColor" text-anchor="middle">Has an</text>
+<text class="nd" x="240" y="334.0" fill="currentColor" text-anchor="middle">account?</text>
+<path d="M320,320 L480,320 L480,380" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="332" y="312" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">NO</text>
+<rect x="392.5" y="380.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="404.0" fill="currentColor" text-anchor="middle">Gets an email to</text>
+<text class="nd" x="480" y="422.0" fill="currentColor" text-anchor="middle">create a password</text>
+<path d="M480,436 L480,468" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<rect x="392.5" y="468.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="492.0" fill="currentColor" text-anchor="middle">Returns to the platform</text>
+<text class="nd" x="480" y="510.0" fill="currentColor" text-anchor="middle">and creates a password</text>
+<path d="M480,524 L480,556" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<rect x="392.5" y="556.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="589.0" fill="currentColor" text-anchor="middle">Confirms their email</text>
+<path d="M480,612 L480,660 L328,660" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<path d="M240,364 L240,644" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="248" y="390" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">YES</text>
+<rect x="152.5" y="644.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="240" y="668.0" fill="currentColor" text-anchor="middle">Enters email</text>
+<text class="nd" x="240" y="686.0" fill="currentColor" text-anchor="middle">and password</text>
+<path d="M240,700 L240,736" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<polygon points="240,736 320,780 240,824 160,780" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="240" y="776.0" fill="currentColor" text-anchor="middle">Remembers the</text>
+<text class="nd" x="240" y="794.0" fill="currentColor" text-anchor="middle">password?</text>
+<path d="M320,780 L392,780" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="332" y="772" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">NO</text>
+<rect x="392.5" y="752.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="776.0" fill="currentColor" text-anchor="middle">Resets</text>
+<text class="nd" x="480" y="794.0" fill="currentColor" text-anchor="middle">password</text>
+<path d="M568,780 L620,780 L620,688 L328,688" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="612" y="740" text-anchor="end" stroke="#ffffff" stroke-width="6" paint-order="stroke">RETRIES</text>
+<path d="M480,808 L480,868" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="488" y="844" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">GIVES UP</text>
+<rect x="392.5" y="868.5" width="175" height="55" fill="#ffffff" stroke="currentColor" stroke-dasharray="4 4"/>
+<text class="nd" x="480" y="901.0" fill="currentColor" text-anchor="middle">Drops off</text>
+<path d="M240,824 L240,868" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="248" y="850" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">YES</text>
+<rect x="152.0" y="868" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="240" y="901.0" fill="#ffffff" text-anchor="middle">Sees the document</text>
+</svg>
+    <svg class="flow" viewBox="710 70 620 500" role="img" aria-label="Sign-in flow after: one sign-in step and one decision based on the method used" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ahd" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
+<text class="tt" x="720" y="100">After</text>
+<text class="lb" x="1320" y="100" text-anchor="end">NO PASSWORD</text>
+<line x1="720" y1="116.5" x2="1320" y2="116.5" style="stroke:var(--hair)"/>
+<rect x="832.0" y="156" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="920" y="180.0" fill="#ffffff" text-anchor="middle">Gets an invitation</text>
+<text class="nd" x="920" y="198.0" fill="#ffffff" text-anchor="middle">by email</text>
+<rect x="1072.0" y="156" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="1160" y="189.0" fill="#ffffff" text-anchor="middle">Returns another day</text>
+<path d="M920,212 L920,276" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<path d="M1160,212 L1160,244 L920,244" fill="none" stroke="currentColor" stroke-width="1"/>
+<rect x="832.5" y="276.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="920" y="300.0" fill="currentColor" text-anchor="middle">Signs in with magic link</text>
+<text class="nd" x="920" y="318.0" fill="currentColor" text-anchor="middle">or SSO (Google, Outlook)</text>
+<path d="M920,332 L920,368" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<polygon points="920,368 1008,412 920,456 832,412" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="920" y="408.0" fill="currentColor" text-anchor="middle">First time or</text>
+<text class="nd" x="920" y="426.0" fill="currentColor" text-anchor="middle">same method?</text>
+<path d="M1008,412 L1072,412" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<text class="lb" x="1020" y="404" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">NO</text>
+<rect x="1072.5" y="384.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="1160" y="408.0" fill="currentColor" text-anchor="middle">Alert: sign in with</text>
+<text class="nd" x="1160" y="426.0" fill="currentColor" text-anchor="middle">your original method</text>
+<path d="M1160,384 L1160,304 L1008,304" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<text class="lb" x="1168" y="356" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">RETRIES</text>
+<path d="M920,456 L920,500" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<text class="lb" x="928" y="482" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">YES</text>
+<rect x="832.0" y="500" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="920" y="533.0" fill="#ffffff" text-anchor="middle">Sees the document</text>
+</svg>
+  </div>
+  <figure class="shot">
+    <div class="panel"><img src="../../../assets/img/third-party-portal/signin.webp" width="1120" height="840" alt="Passwordless sign-in screen: the contract name, buttons to continue with Google or Outlook, and the option to get a sign-in link by email." loading="lazy"></div>
+    <figcaption>Interface recreated for illustration.</figcaption>
+  </figure>
+  <div class="prose">
+    <span class="label">Prototype</span>
+    <p>Walk through the passwordless flow: the email invitation, the three ways to sign in, the alert for a different method and arrival at the document.</p>
+    <p>This prototype recreates the redesigned flow. It is not the version we tested before launch. The document view appears as context and is not part of my design.</p>
+    <a class="btn" href="#" data-todo="Prototype page">View prototype ↗</a>
+  </div>
+</section>
+
+<section>
+  <h2>What I learned</h2>
+  <div class="prose">
+    <p>The diagnosis left a distinction I now apply to every project: an occasional user has different needs from a daily user, beyond using the product less often. Friction a regular user overcomes once, an occasional user faces on every visit.</p>
+    <p>With the same reasoning, I would take the solution one step further today. In the final version, each user always had to sign in with the method they first registered with. Today I would identify them by email regardless of method, so they don't have to remember anything.</p>
+    <p>The prototype we tested before launch didn't ask users to create an account, so the sign-up friction never showed up in testing. Today I would test with the real sign-up.</p>
+  </div>
+  <p class="small">Interfaces recreated for illustration. The original design is under NDA.</p>
+</section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <a href="../tecno-fast-rental/"><span class="label">Next project</span><span class="title title--xl">Tecno Fast</span><span class="go">Open case <span aria-hidden="true">→</span></span></a>
+  </div>
+</footer>
+
+</body>
+</html>

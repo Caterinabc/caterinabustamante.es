@@ -116,7 +116,7 @@ figure{display:flex;flex-direction:column;gap:var(--s12);min-width:0}
 @media (max-width:768px){.pairs{grid-template-columns:1fr}}
 
 /* Flow diagrams (SVG) */
-.flow{display:block;width:100%;height:auto}
+.flow{display:block;width:100%;height:auto;color:var(--ink)}
 .flow .lb{font:400 12px var(--mono);letter-spacing:.02em;fill:var(--ink)}
 .flow .tt{font:600 24px var(--sans);letter-spacing:-.02em;fill:var(--ink)}
 .flow .nd{font:400 14px var(--sans)}

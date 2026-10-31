@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Visita LCO | Caterina Bustamante</title>
+<meta name="description" content="For the 50th anniversary of first light at Las Campanas Observatory, I designed and built a virtual tour that recreates a night of observation.">
+<link rel="canonical" href="https://caterinabustamante.es/en/work/visita-lco/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Visita LCO | Caterina Bustamante">
+<meta property="og:description" content="For the 50th anniversary of first light at Las Campanas Observatory, I designed and built a virtual tour that recreates a night of observation.">
+<meta property="og:url" content="https://caterinabustamante.es/en/work/visita-lco/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../../../css/styles.css">
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="site-head" aria-label="Main">
+    <a href="../../#work">Work</a>
+    <a class="name" href="../../">Caterina Bustamante</a>
+    <a href="../../#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap t-gray">
+<div class="intro">
+  <div class="intro-text">
+    <span class="label">Case study · Web design and development</span>
+    <h1>Visita LCO</h1>
+    <p class="lede">For the 50th anniversary of first light at Las Campanas Observatory, I designed and built a virtual tour that recreates a night of observation. The site opens up areas that are normally closed to the public. In two years it reached 1,900 users in 52 countries, and one in four completed the tour.</p>
+  </div>
+  <dl class="meta">
+    <div><dt class="label">Year</dt><dd>2021</dd></div>
+    <div><dt class="label">Role</dt><dd>Lead web designer and developer</dd></div>
+    <div><dt class="label">Product</dt><dd>360° virtual tour website</dd></div>
+    <div><dt class="label">Focus</dt><dd>Web design and development, information architecture, 360° photography</dd></div>
+    <div><dt class="label">Tools</dt><dd>360° panoramas, VR headset support, Google Analytics</dd></div>
+    <div class="wide"><dt class="label">Team</dt><dd>The observatory's art director and community manager, with a sound designer and astronomers</dd></div>
+  </dl>
+  <figure class="tile cover"><img src="../../../assets/img/visita-lco/01-portada.webp" width="1920" height="1441" alt="Visita LCO open on two laptops, showing the Magellan telescopes at night."></figure>
+</div>
+
+<section>
+  <h2>The problem</h2>
+  <div class="prose">
+    <p>An observatory works at night, and most of its facilities can't be visited. For the anniversary, the goal was for anyone, from any country, to experience a night of observation and learn what happens inside.</p>
+    <p>I helped define the project, its scope and its goals. Then I took on the full design and development, and shot the photos and 360° panoramas of the observatory.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Process</h2>
+  <ol class="steps">
+    <li class="turn"><span class="label">50 years of first light</span></li>
+    <li><span class="label">01</span><span>Scope and goals</span></li>
+    <li><span class="label">02</span><span>Information architecture</span></li>
+    <li><span class="label">03</span><span>Wireframes</span></li>
+    <li><span class="label">04</span><span>Photography and 360° panoramas</span></li>
+    <li><span class="label">05</span><span>Development and interactions</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>The structure</h2>
+  <div class="prose"><p>The tour follows the order of a real night of observation, so the navigation reads as a journey instead of a menu.</p></div>
+  <div class="ia-legend" aria-hidden="true"><span><i class="sc"></i>Scene</span><span><i class="sub"></i>Sub-scene</span><span><i class="pop"></i>Pop-up</span><span><i class="vr"></i>VR tour</span></div>
+  <ol class="ia" aria-label="Information architecture of the tour, in order">
+    <li class="ia-stage"><span class="label">01</span><span class="n sc">Start</span></li>
+    <li class="ia-stage"><span class="label">02</span><span class="n sc">Arrival at the observatory</span><span class="n pop">Observatory info</span></li>
+    <li class="ia-stage"><span class="label">03</span><span class="n sc">Path to the domes</span><span class="n sub">Interactive activity</span><span class="n pop">Site info</span></li>
+    <li class="ia-stage"><span class="label">04</span><span class="n sc">Henrietta Swope</span><span class="n sub">Control room</span><span class="n pop">Telescope info</span><span class="n vr">Telescope 1</span></li>
+    <li class="ia-stage"><span class="label">05</span><span class="n sc">Irénée du Pont</span><span class="n sub">Control room</span><span class="n pop">Telescope info</span><span class="n vr">Telescope 2</span></li>
+    <li class="ia-stage"><span class="label">06</span><span class="n sc">Magellan</span><span class="n sub">Control room</span><span class="n pop">Telescopes info</span><span class="n vr">Telescopes 3</span></li>
+    <li class="ia-stage"><span class="label">07</span><span class="n sc">Exit</span><span class="n sub">Future observatory</span><span class="n pop">Closing message: protect dark skies</span></li>
+    <li class="ia-stage"><span class="label">08</span><span class="n sc">Close</span><span class="n pop">Review</span></li>
+  </ol>
+  <p class="small">Information architecture: eight scenes in the order of a night of observation.</p>
+  <div class="wf-grid">
+    <figure><div class="wf"><div class="ws" role="img" aria-label="Start wireframe: welcome line, #LIFEATLCO title, short texts and a Start the tour button.">
+      <span class="big" style="top:5cqw;font-size:3cqw">WELCOME TO LAS CAMPANAS OBSERVATORY</span>
+      <span class="pill c" style="top:11cqw">ES / EN</span>
+      <span class="big" style="top:17cqw;font-size:8cqw">#LIFEATLCO</span>
+      <span class="x" style="left:40%;top:30cqw;width:20%;height:5cqw"></span>
+      <span class="ln" style="left:6%;width:24%;top:39cqw"><i></i><i style="width:80%"></i></span>
+      <span class="ln" style="left:38%;width:24%;top:39cqw"><i></i><i style="width:80%"></i></span>
+      <span class="ln" style="left:70%;width:24%;top:39cqw"><i></i><i style="width:80%"></i></span>
+      <span class="pill c" style="top:52cqw">Start the tour</span>
+    </div></div><figcaption>Start</figcaption></figure>
+    <figure><div class="wf"><div class="ws g" role="img" aria-label="Scene wireframe: navigation tabs, an audio guide and text over a night landscape.">
+      <span class="mt a"></span><span class="mt b"></span><span class="st" style="left:14%;top:14cqw"></span><span class="st" style="left:44%;top:40cqw"></span><span class="st" style="left:70%;top:30cqw"></span>
+      <div class="top"><span class="ttl">Scene title</span><span class="tabs"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span><span class="ico"></span></div>
+      <span class="av" style="left:5%;top:34cqw"></span><span class="blk" style="left:18%;top:36cqw;width:28%;height:6cqw"></span>
+    </div></div><figcaption>Scene: guide and context</figcaption></figure>
+    <figure><div class="wf"><div class="ws g" role="img" aria-label="Scene wireframe with a featured video or image in the center.">
+      <span class="st" style="left:10%;top:16cqw"></span><span class="st" style="left:80%;top:22cqw"></span><span class="st" style="left:14%;top:46cqw"></span>
+      <div class="top"><span class="ttl">Scene title</span><span class="tabs"><i></i><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="ico"></span></div>
+      <span class="blk" style="left:38%;top:16cqw;width:22%;height:36cqw"></span>
+    </div></div><figcaption>Scene: featured content</figcaption></figure>
+    <figure><div class="wf"><div class="ws g" role="img" aria-label="Sub-scene wireframe: guide and two cards that open the telescope and science activity pop-ups.">
+      <div class="top"><span class="ttl">Scene title</span><span class="tabs"><i></i><i></i><i class="on"></i><i></i><i></i><i></i></span><span class="ico"></span></div>
+      <span class="blk" style="left:3%;top:14cqw;width:34%;height:8cqw"></span><span class="av" style="left:3%;top:26cqw"></span>
+      <span class="card" style="left:22%;top:34cqw;width:26%;height:16cqw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13.5l13-6.5 1.6 3.2-13 6.5z"/><path d="M16.5 7l2.4-1.2 1.6 3.2-2.4 1.2"/><path d="M10 13l-3 8M11 13l3 8"/></svg></span><span class="card" style="left:52%;top:34cqw;width:26%;height:16cqw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10" ry="3.2" transform="rotate(-20 12 12)"/></svg></span>
+    </div></div><figcaption>Sub-scene: control room</figcaption></figure>
+    <figure><div class="wf"><div class="ws" role="img" aria-label="Telescope pop-up wireframe: image and spec sheet.">
+      <div class="top"><span class="ttl">Scene title</span><span class="ico"></span></div>
+      <span class="big left" style="top:16cqw;left:6%;font-size:3.4cqw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13.5l13-6.5 1.6 3.2-13 6.5z"/><path d="M16.5 7l2.4-1.2 1.6 3.2-2.4 1.2"/><path d="M10 13l-3 8M11 13l3 8"/></svg>Telescope</span>
+      <span class="x" style="left:6%;top:28cqw;width:30%;height:22cqw"></span>
+      <span class="ln" style="left:44%;width:30%;top:30cqw"><i></i><i style="width:70%"></i><i style="width:60%"></i><i style="width:75%"></i><i style="width:40%"></i></span>
+    </div></div><figcaption>Pop-up: telescope details</figcaption></figure>
+    <figure><div class="wf"><div class="ws" role="img" aria-label="Science activity pop-up wireframe: image and text.">
+      <div class="top"><span class="ttl">Scene title</span><span class="ico"></span></div>
+      <span class="big left" style="top:16cqw;left:6%;font-size:3.4cqw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="10" ry="3.2" transform="rotate(-20 12 12)"/></svg>Science activity</span>
+      <span class="x" style="left:6%;top:28cqw;width:30%;height:22cqw"></span>
+      <span class="ln" style="left:44%;width:30%;top:30cqw"><i></i><i style="width:70%"></i><i style="width:55%"></i></span>
+    </div></div><figcaption>Pop-up: science activity</figcaption></figure>
+    <figure><div class="wf"><div class="ws g" role="img" aria-label="360° panorama wireframe.">
+      <span class="mt a"></span><span class="mt b"></span><span class="st" style="left:12%;top:12cqw"></span><span class="st" style="left:30%;top:22cqw"></span><span class="st" style="left:72%;top:28cqw"></span>
+      <div class="top"><span class="ttl">Scene title</span><span class="ico"></span></div>
+      <span class="r360">360°</span>
+    </div></div><figcaption>360° panorama</figcaption></figure>
+    <figure><div class="wf"><div class="ws" role="img" aria-label="Closing wireframe: See you soon, Share and Rate buttons, and short texts.">
+      <div class="top"><span></span><span class="ico"></span></div>
+      <span class="big" style="top:10cqw;font-size:8cqw">SEE YOU SOON!</span>
+      <span class="pill" style="left:28%;top:26cqw">Share</span><span class="pill" style="left:56%;top:26cqw">Rate</span>
+      <span class="ln" style="left:6%;width:24%;top:40cqw"><i></i><i style="width:80%"></i></span>
+      <span class="ln" style="left:38%;width:24%;top:40cqw"><i></i><i style="width:80%"></i></span>
+      <span class="ln" style="left:70%;width:24%;top:40cqw"><i></i><i style="width:80%"></i></span>
+    </div></div><figcaption>Close</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>The experience</h2>
+  <div class="xp">
+    <div class="prose"><span class="label k">360° views</span><p>My own panoramas of the observatory, also navigable with a VR headset.</p></div>
+    <figure>
+      <div class="pano" id="pano" data-src="../../../assets/img/visita-lco/pano.webp" tabindex="0" role="img" aria-label="Interactive 360° panorama inside a telescope dome, with the telescope pointing at the starry sky through the open slit. Drag in any direction, or focus it and use the arrow keys, to look around.">
+        <span class="label pano-hint">Drag to look around</span>
+      </div>
+      <figcaption>360° panorama of the telescope dome. Drag in any direction to look around, up and down included. On a keyboard, use the arrow keys.</figcaption>
+    </figure>
+    <div class="prose"><span class="label k">Mouse tracking</span><p>Interactions that respond to cursor movement and strengthen the feeling of exploring.</p></div>
+    <figure>
+      <div class="px" id="px" role="img" aria-label="Night scene at the observatory in three layers: a starry sky with the Milky Way, a hill with a white telescope dome, and dark rocks in the foreground. The layers shift at different speeds with the cursor.">
+        <img class="px-l" data-depth="0.15" src="../../../assets/img/visita-lco/px-sky.webp" width="1920" height="1085" alt="">
+        <img class="px-l px-b" data-depth="0.45" src="../../../assets/img/visita-lco/px-mid.webp" width="1920" height="707" alt="">
+        <img class="px-l px-b" data-depth="1" src="../../../assets/img/visita-lco/px-front.webp" width="1920" height="447" alt="">
+        <span class="label pano-hint">Move the cursor anywhere</span>
+      </div>
+      <figcaption>Recreated tour scene. Layers farther away move slower, which gives the view depth.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <h2>Results</h2>
+  <div class="prose"><p>I measured two goals with Google Analytics: giving people access and teaching them about the observatory, and an interface intuitive enough to encourage exploration.</p></div>
+  <div class="stats">
+    <div class="stat"><span class="label">Reach</span><b class="title title--s">1,900</b><p>users in two years, starting with 365 in the first month.</p></div>
+    <div class="stat"><span class="label">Countries</span><b class="title title--s">52</b><p>countries reached, up from 19 in the first month.</p></div>
+    <div class="stat"><span class="label">Completion</span><b class="title title--s">1 in 4</b><p>visitors completed the full tour: 26.1% over two years and 28.2% at launch.</p></div>
+    <div class="stat"><span class="label">Engagement</span><b class="title title--s">2 min 41 s</b><p>of average engagement per visitor over two years, for a self-guided tour. Launch-month visitors stayed 3 min 56 s.</p></div>
+    <div class="stat"><span class="label">Exploration</span><b class="title title--s">3.7</b><p>views per visitor on average, with 4.3 in the first month. People moved through several scenes per visit.</p></div>
+    <div class="stat"><span class="label">Exclusive content</span><b class="title title--s">513</b><p>visitors opened content available only on the tour, for 1,904 views. In the first month, 136 visitors and 582 views.</p></div>
+  </div>
+  <div class="prose"><p>The completion rate held steady while traffic grew five-fold. People who arrived long after launch still finished the experience.</p></div>
+  <p class="small">First month: 7 Oct to 7 Nov 2021. Two years: 7 Oct 2021 to 3 Sep 2023.</p>
+</section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <a href="../third-party-portal/"><span class="label">Next project</span><span class="title title--xl">Third-party portal</span><span class="go">Open case <span aria-hidden="true">→</span></span></a>
+  </div>
+</footer>
+
+<script src="../../../js/three.r128.min.js"></script>
+<script src="../../../js/visita-lco.js"></script>
+</body>
+</html>

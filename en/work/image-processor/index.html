@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Image processor | Caterina Bustamante</title>
+<meta name="description" content="While designing an e-commerce site from scratch for a traditional company going digital, I found a bottleneck in catalog preparation: about 1,000 product images had to meet the same specifications before going live.">
+<link rel="canonical" href="https://caterinabustamante.es/en/work/image-processor/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Image processor | Caterina Bustamante">
+<meta property="og:description" content="While designing an e-commerce site from scratch for a traditional company going digital, I found a bottleneck in catalog preparation: about 1,000 product images had to meet the same specifications before going live.">
+<meta property="og:url" content="https://caterinabustamante.es/en/work/image-processor/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../../../css/styles.css">
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="site-head" aria-label="Main">
+    <a href="../../#work">Work</a>
+    <a class="name" href="../../">Caterina Bustamante</a>
+    <a href="../../#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap t-ochre">
+<div class="intro">
+  <div class="intro-text">
+    <span class="label">Case study · AI and automation</span>
+    <h1 class="title">Image processor</h1>
+    <p class="lede">While designing an e-commerce site from scratch for a traditional company going digital, I found a bottleneck in catalog preparation: about 1,000 product images had to meet the same specifications before going live. With AI, I built a tool that processes the whole batch in 4 minutes, adapts to any platform's specifications and generates an installed-surface image when only photos of loose pieces exist.</p>
+  </div>
+  <dl class="meta">
+    <div><dt class="label">Year</dt><dd>2025</dd></div>
+    <div><dt class="label">Role</dt><dd>UX/UI Designer, author of the tool</dd></div>
+    <div><dt class="label">Product</dt><dd>E-commerce for El Bodegón de la Cerámica</dd></div>
+    <div><dt class="label">Team</dt><dd>Canal Cero, development and the client</dd></div>
+    <div><dt class="label">Focus</dt><dd>Design Ops, automation, e-commerce catalog</dd></div>
+    <div><dt class="label">Tools</dt><dd>ChatGPT, Python, Google Colab</dd></div>
+  </dl>
+  <figure class="tile"><img src="../../../assets/img/image-processor/hero.webp" width="1469" height="812" alt="Google Drive output folder with processed tile images next to the Colab notebook that runs the script."></figure>
+</div>
+
+<section>
+  <h2>The bottleneck</h2>
+  <div class="prose"><p>Preparing each image meant repeating the same five actions. The task didn't need a different design decision per file, only the same rules applied consistently, so I treated it as a workflow problem.</p></div>
+  <div class="cmpf" role="img" aria-label="Manual process: five actions repeated for each of the 1,000 images. With the script: define specifications, run and verify, once per batch.">
+    <div><div class="cmpf-head"><span class="label">Manual</span><span class="label num">× 1,000</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Open</span></li><li><span class="label">02</span><span>Resize</span></li><li><span class="label">03</span><span>Center</span></li><li><span class="label">04</span><span>Export</span></li><li><span class="label">05</span><span>Check</span></li></ol></div>
+    <div class="cmpf-script"><div class="cmpf-head"><span class="label">With the script</span><span class="label num">× 1 batch</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Define specifications</span></li><li><span class="label">02</span><span>Run</span></li><li><span class="label">03</span><span>Verify</span></li></ol></div>
+  </div>
+</section>
+
+<section>
+  <h2>Why a custom script</h2>
+  <div class="prose"><p>The script had to handle several tasks at once, and no single tool covered them.</p></div>
+  <ul class="reasons" aria-label="Reasons for a custom script">
+    <li class="reason"><h3>Surface images</h3><p>None of the tools I tried could assemble an installed-surface image from several pieces.</p></li>
+    <li class="reason"><h3>Completeness check</h3><p>None of them checked that every image had been processed.</p></li>
+    <li class="reason"><h3>Reusable setup</h3><p>Entering parameters in a script was simpler than reconfiguring a tool every time.</p></li>
+  </ul>
+</section>
+
+<section>
+  <h2>The rules</h2>
+  <div class="prose"><p>The script is configured with each e-commerce platform's specifications. You look up the platform's image requirements and enter them as parameters.</p></div>
+  <div class="scroll">
+    <table class="cmp">
+      <thead><tr><th scope="col">Parameter</th><th scope="col">In this project</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Dimensions</th><td class="num">1500 × 1500 px</td></tr>
+        <tr><th scope="row">Aspect ratio</th><td class="num">1:1</td></tr>
+        <tr><th scope="row">Background</th><td>White</td></tr>
+        <tr><th scope="row">Format</th><td>JPG</td></tr>
+        <tr><th scope="row">Max file size</th><td class="num">300 KB</td></tr>
+        <tr><th scope="row">Min quality</th><td class="num">50 (JPG scale)</td></tr>
+        <tr><th scope="row">Folders</th><td>Input and output in Google Drive</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose"><p><span class="label k">Decision</span>Each image is scaled without distortion and centered on a white square canvas. Every product keeps a consistent scale, and no color differences show against the site background.</p></div>
+</section>
+
+<section>
+  <h2>Built with AI</h2>
+  <div class="prose"><p>I developed the script with ChatGPT in about two hours of iteration. I defined the rules, tested the output on real samples and adjusted until the result matched. The script runs this sequence on each file, using the configured parameters.</p></div>
+  <ol class="pipe" aria-label="Script flow: input folder, convert, resize, center, compress until it meets the max size, verify, output folder and report">
+    <li class="pnode end"><span class="label">Input</span><b>Drive folder</b><span>About 1,000 photos</span></li>
+    <li class="pnode"><span class="label">01</span><b>Convert</b><span>To the defined format</span></li>
+    <li class="pnode"><span class="label">02</span><b>Resize</b><span>Without distortion</span></li>
+    <li class="pnode"><span class="label">03</span><b>Center</b><span>On a white 1:1 canvas</span></li>
+    <li class="pnode"><span class="label">04</span><b>Compress</b><span class="loop label"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6"/><path d="M13 2.5v2.5h-2.5"/></svg>Repeats until 300 KB</span></li>
+    <li class="pnode"><span class="label">05</span><b>Verify</b><span>Compares input and output</span></li>
+    <li class="pnode out"><span class="label">Output</span><b>Ready images</b><span>Plus a report of missing files</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Verification</h2>
+  <div class="prose">
+    <p>Each file name included the SKU and the product name. When it finishes, the script compares the number of images and the file names between the input and output folders, and reports any missing product.</p>
+    <p>I also reviewed a sample of the processed images, chosen by piece type (square, rectangular and irregular), to check the visual result. The sample had no errors.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Result</h2>
+  <div class="prose">
+    <p>I estimated the 15 hours of manual work from a sample of photos I processed by hand. The 4 minutes of run time are measured. Even including development time, the first run took a seventh of the manual process.</p>
+    <p>I ran the script several times and handed it off to the development team and the client. I don't have usage data after the handoff.</p>
+  </div>
+  <div class="bars" role="img" aria-label="Manual process: 15 hours, estimated. First run with the script: 2 hours of development plus 4 minutes of run time. Later runs: 4 minutes.">
+    <div class="bar"><div class="bar-top"><span class="label">Manual</span><span class="num">15 h</span></div><div class="track"><div class="seg manual" style="width:100%"></div></div></div>
+    <div class="bar"><div class="bar-top"><span class="label">Script, first run</span><span class="num">2 h 4 min</span></div><div class="track"><div class="seg dev" style="width:13.33%"></div><div class="seg run" style="width:.44%"></div></div></div>
+    <div class="bar"><div class="bar-top"><span class="label">Script, later runs</span><span class="num">4 min</span></div><div class="track"><div class="seg run" style="width:.44%"></div></div></div>
+    <div class="legend small"><span><i class="sw seg manual"></i>Manual work</span><span><i class="sw seg dev"></i>Development</span><span><i class="sw seg run"></i>Run</span></div>
+  </div>
+  <p class="small">Times for a batch of about 1,000 images. Bars to scale.</p>
+</section>
+
+<section>
+  <h2>The installed-surface image</h2>
+  <div class="prose">
+    <p>In ceramics, customers need to see the product installed, but suppliers often sent only photos of loose pieces. I added a function that assembles an image of the full installed surface from those pieces.</p>
+    <p>The layout depends on the piece's proportions, as in a real installation:</p>
+  </div>
+  <div class="pats">
+    <figure><svg viewBox="0 0 240 240" class="pat" role="img" aria-label="Square pieces in a grid of 2 per row, no offset" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="119" height="119"/><rect x="120.5" y="0.5" width="119" height="119"/><rect x="0.5" y="120.5" width="119" height="119"/><rect x="120.5" y="120.5" width="119" height="119"/></svg><figcaption><span class="label k">Square pieces</span>Grid of 2 per row, no offset.</figcaption></figure>
+    <figure><svg viewBox="0 0 240 240" class="pat" role="img" aria-label="Rectangular pieces in rows of 3 offset by half a piece, cropped to 1:1" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="c"><rect width="240" height="240"/></clipPath></defs><g clip-path="url(#c)"><rect x="-79.5" y="0.5" width="79" height="19"/><rect x="0.5" y="0.5" width="79" height="19"/><rect x="80.5" y="0.5" width="79" height="19"/><rect x="160.5" y="0.5" width="79" height="19"/><rect x="-39.5" y="20.5" width="79" height="19"/><rect x="40.5" y="20.5" width="79" height="19"/><rect x="120.5" y="20.5" width="79" height="19"/><rect x="200.5" y="20.5" width="79" height="19"/><rect x="-79.5" y="40.5" width="79" height="19"/><rect x="0.5" y="40.5" width="79" height="19"/><rect x="80.5" y="40.5" width="79" height="19"/><rect x="160.5" y="40.5" width="79" height="19"/><rect x="-39.5" y="60.5" width="79" height="19"/><rect x="40.5" y="60.5" width="79" height="19"/><rect x="120.5" y="60.5" width="79" height="19"/><rect x="200.5" y="60.5" width="79" height="19"/><rect x="-79.5" y="80.5" width="79" height="19"/><rect x="0.5" y="80.5" width="79" height="19"/><rect x="80.5" y="80.5" width="79" height="19"/><rect x="160.5" y="80.5" width="79" height="19"/><rect x="-39.5" y="100.5" width="79" height="19"/><rect x="40.5" y="100.5" width="79" height="19"/><rect x="120.5" y="100.5" width="79" height="19"/><rect x="200.5" y="100.5" width="79" height="19"/><rect x="-79.5" y="120.5" width="79" height="19"/><rect x="0.5" y="120.5" width="79" height="19"/><rect x="80.5" y="120.5" width="79" height="19"/><rect x="160.5" y="120.5" width="79" height="19"/><rect x="-39.5" y="140.5" width="79" height="19"/><rect x="40.5" y="140.5" width="79" height="19"/><rect x="120.5" y="140.5" width="79" height="19"/><rect x="200.5" y="140.5" width="79" height="19"/><rect x="-79.5" y="160.5" width="79" height="19"/><rect x="0.5" y="160.5" width="79" height="19"/><rect x="80.5" y="160.5" width="79" height="19"/><rect x="160.5" y="160.5" width="79" height="19"/><rect x="-39.5" y="180.5" width="79" height="19"/><rect x="40.5" y="180.5" width="79" height="19"/><rect x="120.5" y="180.5" width="79" height="19"/><rect x="200.5" y="180.5" width="79" height="19"/><rect x="-79.5" y="200.5" width="79" height="19"/><rect x="0.5" y="200.5" width="79" height="19"/><rect x="80.5" y="200.5" width="79" height="19"/><rect x="160.5" y="200.5" width="79" height="19"/><rect x="-39.5" y="220.5" width="79" height="19"/><rect x="40.5" y="220.5" width="79" height="19"/><rect x="120.5" y="220.5" width="79" height="19"/><rect x="200.5" y="220.5" width="79" height="19"/></g><rect class="pat-border" x=".5" y=".5" width="239" height="239"/></svg><figcaption><span class="label k">Rectangular pieces</span>Rows of 3, offset by half a piece.</figcaption></figure>
+  </div>
+  <div class="prose">
+    <p>The result is cropped to 1:1 so it uses the same format as the rest of the catalog. If the pieces don't fill the last row, the script repeats pieces from the same set to complete it.</p>
+    <p>The installed-surface image is a reference, and the client knew it.</p>
+  </div>
+  <figure>
+    <div class="pf">
+      <div class="pf-head"><span class="label">01 · Input</span><span class="label">Supplier folder · 6 pieces</span></div>
+      <div class="pf-tiles"><img src="../../../assets/img/image-processor/p1.webp" width="180" height="180" alt="Piece 1"><img src="../../../assets/img/image-processor/p2.webp" width="180" height="180" alt="Piece 2"><img src="../../../assets/img/image-processor/p3.webp" width="180" height="180" alt="Piece 3"><img src="../../../assets/img/image-processor/p4.webp" width="180" height="180" alt="Piece 4"><img src="../../../assets/img/image-processor/p5.webp" width="180" height="180" alt="Piece 5"><img src="../../../assets/img/image-processor/p6.webp" width="180" height="180" alt="Piece 6"></div>
+      <div class="pf-head"><span class="label">02 · Output</span><span class="label">Generated installed surface</span></div>
+      <img class="pf-pano" src="../../../assets/img/image-processor/surface.webp" width="1120" height="747" alt="Installed-surface image generated from the six pieces" loading="lazy">
+      <div class="pf-head"><span class="label">03 · Product page</span><span class="label">Piece, surface, installed</span></div>
+      <div class="an" role="img" aria-label="Product page gallery for El Bodegón de la Cerámica: the loose piece, the surface image generated by the script and the installed photo.">
+        <div class="mock"><div class="an-frame"><img class="an-f an-f1" src="../../../assets/img/image-processor/g1.webp" width="1120" height="677" alt=""><img class="an-f an-f2" src="../../../assets/img/image-processor/g2.webp" width="1120" height="677" alt=""><img class="an-f an-f3" src="../../../assets/img/image-processor/g3.webp" width="1120" height="677" alt=""></div></div>
+        <div class="an-steps"><div class="an-s an-s1"><span class="an-bar"></span><span class="label">Piece</span></div><div class="an-s an-s2"><span class="an-bar"></span><span class="label">Surface · new</span></div><div class="an-s an-s3"><span class="an-bar"></span><span class="label">Installed</span></div></div>
+      </div>
+    </div>
+    <figcaption>A product that arrived without an installed-surface image. The script generated it from the supplier's loose pieces.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>What I learned</h2>
+  <div class="prose"><p>This project extended my design work into the production process. When a task requires the same decisions hundreds of times, I turn them into explicit rules and automate them. AI speeds up development, but defining the rules and validating the result remain design work.</p></div>
+</section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <a href="../visita-lco/"><span class="label">Next project</span><span class="title title--xl">Visita LCO</span><span class="go">Open case <span aria-hidden="true">→</span></span></a>
+  </div>
+</footer>
+
+</body>
+</html>

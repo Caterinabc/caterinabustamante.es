@@ -300,6 +300,8 @@ a.more-link:hover h3{text-decoration:underline}
 .sw{width:12px;height:12px;display:inline-block}
 .pats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s32);max-width:var(--measure)}
 .pat{display:block;width:100%;height:auto}
+.pat rect{fill:var(--surface);stroke:var(--ink)}
+.pat .pat-border{fill:none}
 .pf{display:flex;flex-direction:column;gap:var(--s16)}
 .pf-head{display:flex;justify-content:space-between;gap:var(--s16);flex-wrap:wrap;border-top:1px solid var(--ink);padding-top:var(--s8)}
 .pf-tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--s8)}

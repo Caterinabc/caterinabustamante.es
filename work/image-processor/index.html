@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Procesador de imágenes | Caterina Bustamante</title>
+<meta name="description" content="Mientras diseñaba desde cero un e-commerce para una empresa tradicional que se digitalizaba, encontré un cuello de botella en la preparación del catálogo: unas 1000 imágenes de producto debían cumplir las mismas especificaciones antes de publicarse.">
+<link rel="canonical" href="https://caterinabustamante.es/work/image-processor/">
+<link rel="alternate" hreflang="es" href="https://caterinabustamante.es/work/image-processor/">
+<link rel="alternate" hreflang="en" href="https://caterinabustamante.es/en/work/image-processor/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Procesador de imágenes | Caterina Bustamante">
+<meta property="og:description" content="Mientras diseñaba desde cero un e-commerce para una empresa tradicional que se digitalizaba, encontré un cuello de botella en la preparación del catálogo: unas 1000 imágenes de producto debían cumplir las mismas especificaciones antes de publicarse.">
+<meta property="og:url" content="https://caterinabustamante.es/work/image-processor/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="site-head" aria-label="Principal">
+    <a href="../../#work">Trabajo</a>
+    <a class="name" href="../../">Caterina Bustamante</a>
+    <div class="site-head-end">
+      <a href="../../#contact">Contacto</a>
+      <a href="../../en/work/image-processor/" hreflang="en" lang="en">English</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap t-ochre">
+<div class="intro">
+  <div class="intro-text">
+    <span class="label">Caso de estudio · IA y automatización</span>
+    <h1 class="title">Procesador de imágenes</h1>
+    <p class="lede">Mientras diseñaba desde cero un e-commerce para una empresa tradicional que se digitalizaba, encontré un cuello de botella en la preparación del catálogo: unas 1000 imágenes de producto debían cumplir las mismas especificaciones antes de publicarse. Con IA, construí una herramienta que procesa todo el lote en 4 minutos, se adapta a las especificaciones de cualquier plataforma y genera una imagen de superficie instalada cuando solo existen fotos de piezas sueltas.</p>
+  </div>
+  <dl class="meta">
+    <div><dt class="label">Año</dt><dd>2025</dd></div>
+    <div><dt class="label">Rol</dt><dd>UX/UI Designer, autoría de la herramienta</dd></div>
+    <div><dt class="label">Producto</dt><dd>E-commerce de El Bodegón de la Cerámica</dd></div>
+    <div><dt class="label">Equipo</dt><dd>Canal Cero, desarrollo y el cliente</dd></div>
+    <div><dt class="label">Enfoque</dt><dd>Design Ops, automatización, catálogo de e-commerce</dd></div>
+    <div><dt class="label">Herramientas</dt><dd>ChatGPT, Python, Google Colab</dd></div>
+  </dl>
+  <figure class="tile"><img src="../../assets/img/image-processor/hero.webp" width="1469" height="812" alt="Carpeta de salida en Google Drive con imágenes de baldosas procesadas junto al notebook de Colab que ejecuta el script."></figure>
+</div>
+
+<section>
+  <h2>El cuello de botella</h2>
+  <div class="prose"><p>Preparar cada imagen implicaba repetir las mismas cinco acciones. La tarea no necesitaba una decisión de diseño distinta por archivo, solo aplicar las mismas reglas de forma consistente, así que la traté como un problema de flujo de trabajo.</p></div>
+  <div class="cmpf" role="img" aria-label="Proceso manual: cinco acciones repetidas en cada una de las 1000 imágenes. Con el script: definir especificaciones, ejecutar y verificar, una vez por lote.">
+    <div><div class="cmpf-head"><span class="label">Manual</span><span class="label num">× 1000</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Abrir</span></li><li><span class="label">02</span><span>Redimensionar</span></li><li><span class="label">03</span><span>Centrar</span></li><li><span class="label">04</span><span>Exportar</span></li><li><span class="label">05</span><span>Revisar</span></li></ol></div>
+    <div class="cmpf-script"><div class="cmpf-head"><span class="label">Con el script</span><span class="label num">× 1 lote</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Definir especificaciones</span></li><li><span class="label">02</span><span>Ejecutar</span></li><li><span class="label">03</span><span>Verificar</span></li></ol></div>
+  </div>
+</section>
+
+<section>
+  <h2>Por qué un script propio</h2>
+  <div class="prose"><p>El script tenía que resolver varias tareas a la vez, y ninguna herramienta las cubría todas.</p></div>
+  <ul class="reasons" aria-label="Motivos para un script propio">
+    <li class="reason"><h3>Imágenes de superficie</h3><p>Ninguna de las herramientas que probé podía armar una imagen de superficie instalada a partir de varias piezas.</p></li>
+    <li class="reason"><h3>Control de completitud</h3><p>Ninguna comprobaba que todas las imágenes se hubieran procesado.</p></li>
+    <li class="reason"><h3>Configuración reutilizable</h3><p>Indicar los parámetros en un script era más simple que reconfigurar una herramienta cada vez.</p></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Las reglas</h2>
+  <div class="prose"><p>El script se configura con las especificaciones de cada plataforma de e-commerce. Se consultan los requisitos de imagen de la plataforma y se indican como parámetros.</p></div>
+  <div class="scroll">
+    <table class="cmp">
+      <thead><tr><th scope="col">Parámetro</th><th scope="col">En este proyecto</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Dimensiones</th><td class="num">1500 × 1500 px</td></tr>
+        <tr><th scope="row">Relación de aspecto</th><td class="num">1:1</td></tr>
+        <tr><th scope="row">Fondo</th><td>Blanco</td></tr>
+        <tr><th scope="row">Formato</th><td>JPG</td></tr>
+        <tr><th scope="row">Tamaño máximo de archivo</th><td class="num">300 KB</td></tr>
+        <tr><th scope="row">Calidad mínima</th><td class="num">50 (escala JPG)</td></tr>
+        <tr><th scope="row">Carpetas</th><td>Entrada y salida en Google Drive</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose"><p><span class="label k">Decisión</span>Cada imagen se escala sin deformarla y se centra en un lienzo cuadrado blanco. Todos los productos mantienen una escala coherente y no se notan diferencias de color con el fondo del sitio.</p></div>
+</section>
+
+<section>
+  <h2>Hecho con IA</h2>
+  <div class="prose"><p>Desarrollé el script con ChatGPT en unas dos horas de iteración. Definí las reglas, probé el resultado con muestras reales y ajusté hasta que coincidió. El script ejecuta esta secuencia en cada archivo, con los parámetros configurados.</p></div>
+  <ol class="pipe" aria-label="Flujo del script: carpeta de entrada, convertir, redimensionar, centrar, comprimir hasta cumplir el tamaño máximo, verificar, carpeta de salida e informe">
+    <li class="pnode end"><span class="label">Entrada</span><b>Carpeta de Drive</b><span>Unas 1000 fotos</span></li>
+    <li class="pnode"><span class="label">01</span><b>Convertir</b><span>Al formato definido</span></li>
+    <li class="pnode"><span class="label">02</span><b>Redimensionar</b><span>Sin deformar</span></li>
+    <li class="pnode"><span class="label">03</span><b>Centrar</b><span>En un lienzo blanco 1:1</span></li>
+    <li class="pnode"><span class="label">04</span><b>Comprimir</b><span class="loop label"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6"/><path d="M13 2.5v2.5h-2.5"/></svg>Se repite hasta 300 KB</span></li>
+    <li class="pnode"><span class="label">05</span><b>Verificar</b><span>Compara entrada y salida</span></li>
+    <li class="pnode out"><span class="label">Salida</span><b>Imágenes listas</b><span>Más un informe de archivos faltantes</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Verificación</h2>
+  <div class="prose">
+    <p>Cada nombre de archivo incluía el SKU y el nombre del producto. Al terminar, el script compara la cantidad de imágenes y los nombres de archivo entre las carpetas de entrada y salida, e informa de cualquier producto que falte.</p>
+    <p>También revisé una muestra de las imágenes procesadas, elegida por tipo de pieza (cuadrada, rectangular e irregular), para comprobar el resultado visual. La muestra no tuvo errores.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Resultado</h2>
+  <div class="prose">
+    <p>Estimé las 15 horas de trabajo manual a partir de una muestra de fotos que procesé a mano. Los 4 minutos de ejecución están medidos. Incluso contando el tiempo de desarrollo, la primera ejecución tomó una séptima parte del proceso manual.</p>
+    <p>Ejecuté el script varias veces y lo entregué al equipo de desarrollo y al cliente. No tengo datos de uso posteriores a la entrega.</p>
+  </div>
+  <div class="bars" role="img" aria-label="Proceso manual: 15 horas, estimadas. Primera ejecución con el script: 2 horas de desarrollo más 4 minutos de ejecución. Ejecuciones posteriores: 4 minutos.">
+    <div class="bar"><div class="bar-top"><span class="label">Manual</span><span class="num">15 h</span></div><div class="track"><div class="seg manual" style="width:100%"></div></div></div>
+    <div class="bar"><div class="bar-top"><span class="label">Script, primera ejecución</span><span class="num">2 h 4 min</span></div><div class="track"><div class="seg dev" style="width:13.33%"></div><div class="seg run" style="width:.44%"></div></div></div>
+    <div class="bar"><div class="bar-top"><span class="label">Script, ejecuciones posteriores</span><span class="num">4 min</span></div><div class="track"><div class="seg run" style="width:.44%"></div></div></div>
+    <div class="legend small"><span><i class="sw seg manual"></i>Trabajo manual</span><span><i class="sw seg dev"></i>Desarrollo</span><span><i class="sw seg run"></i>Ejecución</span></div>
+  </div>
+  <p class="small">Tiempos para un lote de unas 1000 imágenes. Barras a escala.</p>
+</section>
+
+<section>
+  <h2>La imagen de superficie instalada</h2>
+  <div class="prose">
+    <p>En cerámica, los clientes necesitan ver el producto instalado, pero los proveedores solían enviar solo fotos de piezas sueltas. Añadí una función que arma una imagen de la superficie instalada completa a partir de esas piezas.</p>
+    <p>La disposición depende de las proporciones de la pieza, como en una instalación real:</p>
+  </div>
+  <div class="pats">
+    <figure><svg viewBox="0 0 240 240" class="pat" role="img" aria-label="Piezas cuadradas en una cuadrícula de 2 por fila, sin desfase" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="119" height="119"/><rect x="120.5" y="0.5" width="119" height="119"/><rect x="0.5" y="120.5" width="119" height="119"/><rect x="120.5" y="120.5" width="119" height="119"/></svg><figcaption><span class="label k">Piezas cuadradas</span>Cuadrícula de 2 por fila, sin desfase.</figcaption></figure>
+    <figure><svg viewBox="0 0 240 240" class="pat" role="img" aria-label="Piezas rectangulares en filas de 3 desfasadas media pieza, recortadas a 1:1" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="c"><rect width="240" height="240"/></clipPath></defs><g clip-path="url(#c)"><rect x="-79.5" y="0.5" width="79" height="19"/><rect x="0.5" y="0.5" width="79" height="19"/><rect x="80.5" y="0.5" width="79" height="19"/><rect x="160.5" y="0.5" width="79" height="19"/><rect x="-39.5" y="20.5" width="79" height="19"/><rect x="40.5" y="20.5" width="79" height="19"/><rect x="120.5" y="20.5" width="79" height="19"/><rect x="200.5" y="20.5" width="79" height="19"/><rect x="-79.5" y="40.5" width="79" height="19"/><rect x="0.5" y="40.5" width="79" height="19"/><rect x="80.5" y="40.5" width="79" height="19"/><rect x="160.5" y="40.5" width="79" height="19"/><rect x="-39.5" y="60.5" width="79" height="19"/><rect x="40.5" y="60.5" width="79" height="19"/><rect x="120.5" y="60.5" width="79" height="19"/><rect x="200.5" y="60.5" width="79" height="19"/><rect x="-79.5" y="80.5" width="79" height="19"/><rect x="0.5" y="80.5" width="79" height="19"/><rect x="80.5" y="80.5" width="79" height="19"/><rect x="160.5" y="80.5" width="79" height="19"/><rect x="-39.5" y="100.5" width="79" height="19"/><rect x="40.5" y="100.5" width="79" height="19"/><rect x="120.5" y="100.5" width="79" height="19"/><rect x="200.5" y="100.5" width="79" height="19"/><rect x="-79.5" y="120.5" width="79" height="19"/><rect x="0.5" y="120.5" width="79" height="19"/><rect x="80.5" y="120.5" width="79" height="19"/><rect x="160.5" y="120.5" width="79" height="19"/><rect x="-39.5" y="140.5" width="79" height="19"/><rect x="40.5" y="140.5" width="79" height="19"/><rect x="120.5" y="140.5" width="79" height="19"/><rect x="200.5" y="140.5" width="79" height="19"/><rect x="-79.5" y="160.5" width="79" height="19"/><rect x="0.5" y="160.5" width="79" height="19"/><rect x="80.5" y="160.5" width="79" height="19"/><rect x="160.5" y="160.5" width="79" height="19"/><rect x="-39.5" y="180.5" width="79" height="19"/><rect x="40.5" y="180.5" width="79" height="19"/><rect x="120.5" y="180.5" width="79" height="19"/><rect x="200.5" y="180.5" width="79" height="19"/><rect x="-79.5" y="200.5" width="79" height="19"/><rect x="0.5" y="200.5" width="79" height="19"/><rect x="80.5" y="200.5" width="79" height="19"/><rect x="160.5" y="200.5" width="79" height="19"/><rect x="-39.5" y="220.5" width="79" height="19"/><rect x="40.5" y="220.5" width="79" height="19"/><rect x="120.5" y="220.5" width="79" height="19"/><rect x="200.5" y="220.5" width="79" height="19"/></g><rect class="pat-border" x=".5" y=".5" width="239" height="239"/></svg><figcaption><span class="label k">Piezas rectangulares</span>Filas de 3, desfasadas media pieza.</figcaption></figure>
+  </div>
+  <div class="prose">
+    <p>El resultado se recorta a 1:1 para usar el mismo formato que el resto del catálogo. Si las piezas no llenan la última fila, el script repite piezas del mismo conjunto para completarla.</p>
+    <p>La imagen de superficie instalada es una referencia, y el cliente lo sabía.</p>
+  </div>
+  <figure>
+    <div class="pf">
+      <div class="pf-head"><span class="label">01 · Entrada</span><span class="label">Carpeta del proveedor · 6 piezas</span></div>
+      <div class="pf-tiles"><img src="../../assets/img/image-processor/p1.webp" width="180" height="180" alt="Pieza 1"><img src="../../assets/img/image-processor/p2.webp" width="180" height="180" alt="Pieza 2"><img src="../../assets/img/image-processor/p3.webp" width="180" height="180" alt="Pieza 3"><img src="../../assets/img/image-processor/p4.webp" width="180" height="180" alt="Pieza 4"><img src="../../assets/img/image-processor/p5.webp" width="180" height="180" alt="Pieza 5"><img src="../../assets/img/image-processor/p6.webp" width="180" height="180" alt="Pieza 6"></div>
+      <div class="pf-head"><span class="label">02 · Salida</span><span class="label">Superficie instalada generada</span></div>
+      <img class="pf-pano" src="../../assets/img/image-processor/surface.webp" width="1120" height="747" alt="Imagen de superficie instalada generada a partir de las seis piezas" loading="lazy">
+      <div class="pf-head"><span class="label">03 · Página de producto</span><span class="label">Pieza, superficie, instalada</span></div>
+      <div class="an" role="img" aria-label="Galería de la página de producto de El Bodegón de la Cerámica: la pieza suelta, la imagen de superficie generada por el script y la foto instalada.">
+        <div class="mock"><div class="an-frame"><img class="an-f an-f1" src="../../assets/img/image-processor/g1.webp" width="1120" height="677" alt=""><img class="an-f an-f2" src="../../assets/img/image-processor/g2.webp" width="1120" height="677" alt=""><img class="an-f an-f3" src="../../assets/img/image-processor/g3.webp" width="1120" height="677" alt=""></div></div>
+        <div class="an-steps"><div class="an-s an-s1"><span class="an-bar"></span><span class="label">Pieza</span></div><div class="an-s an-s2"><span class="an-bar"></span><span class="label">Superficie · nueva</span></div><div class="an-s an-s3"><span class="an-bar"></span><span class="label">Instalada</span></div></div>
+      </div>
+    </div>
+    <figcaption>Un producto que llegó sin imagen de superficie instalada. El script la generó a partir de las piezas sueltas del proveedor.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Lo que aprendí</h2>
+  <div class="prose"><p>Este proyecto extendió mi trabajo de diseño al proceso de producción. Cuando una tarea exige las mismas decisiones cientos de veces, las convierto en reglas explícitas y las automatizo. La IA acelera el desarrollo, pero definir las reglas y validar el resultado siguen siendo trabajo de diseño.</p></div>
+</section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <a href="../visita-lco/"><span class="label">Siguiente proyecto</span><span class="title title--xl">Visita LCO</span><span class="go">Ver caso <span aria-hidden="true">→</span></span></a>
+  </div>
+</footer>
+
+</body>
+</html>

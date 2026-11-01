@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Portal de terceros | Caterina Bustamante</title>
+<meta name="description" content="Un portal donde las contrapartes externas de nuestros clientes podían trabajar los contratos dentro de la plataforma en lugar de por correo electrónico.">
+<link rel="canonical" href="https://caterinabustamante.es/work/third-party-portal/">
+<link rel="alternate" hreflang="es" href="https://caterinabustamante.es/work/third-party-portal/">
+<link rel="alternate" hreflang="en" href="https://caterinabustamante.es/en/work/third-party-portal/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Portal de terceros | Caterina Bustamante">
+<meta property="og:description" content="Un portal donde las contrapartes externas de nuestros clientes podían trabajar los contratos dentro de la plataforma en lugar de por correo electrónico.">
+<meta property="og:url" content="https://caterinabustamante.es/work/third-party-portal/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="site-head" aria-label="Principal">
+    <a href="../../#work">Trabajo</a>
+    <a class="name" href="../../">Caterina Bustamante</a>
+    <div class="site-head-end">
+      <a href="../../#contact">Contacto</a>
+      <a href="../../en/work/third-party-portal/" hreflang="en" lang="en">English</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap t-peri">
+<div class="intro">
+  <div class="intro-text">
+    <span class="label">Caso de estudio · Diseño de producto</span>
+    <h1 class="title">Portal de terceros</h1>
+    <p class="lede">Un portal donde las contrapartes externas de nuestros clientes podían trabajar los contratos dentro de la plataforma en lugar de por correo electrónico. El squad diseñó el portal en conjunto. Tras el lanzamiento, la adopción fue baja. El diagnóstico señaló la contraseña como la principal barrera, así que propuse eliminarla y, dentro del squad, diseñé por mi cuenta el nuevo flujo de inicio de sesión.</p>
+  </div>
+  <dl class="meta">
+    <div><dt class="label">Año</dt><dd>2022</dd></div>
+    <div><dt class="label">Rol</dt><dd>Product Designer, responsable del nuevo flujo de inicio de sesión</dd></div>
+    <div><dt class="label">Producto</dt><dd>Plataforma B2B de gestión del ciclo de vida de contratos (CLM)</dd></div>
+    <div><dt class="label">Equipo</dt><dd>Squad de producto: PM, frontend, backend, QA y CX</dd></div>
+    <div><dt class="label">Enfoque</dt><dd>Diseño de producto, flujos de usuario, pruebas de usabilidad</dd></div>
+    <div><dt class="label">Herramientas</dt><dd>Figma, Mixpanel, Hotjar</dd></div>
+  </dl>
+  <figure class="tile"><img src="../../assets/img/third-party-portal/signin.webp" width="1120" height="840" alt="Pantalla de inicio de sesión sin contraseña: el nombre del contrato, botones para continuar con Google u Outlook y la opción de recibir un enlace de acceso por correo electrónico."></figure>
+</div>
+
+<section>
+  <h2>El problema</h2>
+  <div class="prose"><p>Las empresas gestionaban sus contratos dentro de la plataforma, salvo una parte: negociar y firmar con su propia contraparte, un cliente o un proveedor. Eso seguía ocurriendo por correo electrónico, sin historial ni trazabilidad. Las entrevistas con usuarios confirmaron el patrón.</p></div>
+  <div class="eco" role="img" aria-label="Antes, la contraparte se quedaba fuera de la plataforma y se comunicaba por correo electrónico. Después, la contraparte entra al portal de terceros dentro de la plataforma.">
+    <div class="eco-row">
+      <span class="label">Antes</span>
+      <div class="eco-line">
+        <div class="node solid">Empresa cliente</div>
+        <div class="link"></div>
+        <div class="node">Plataforma CLM</div>
+        <div class="link mail"><span class="label">Email</span></div>
+        <div class="node out">Contraparte externa</div>
+      </div>
+    </div>
+    <div class="eco-row">
+      <span class="label">Después</span>
+      <div class="eco-line after">
+        <div class="node solid">Empresa cliente</div>
+        <div class="link"></div>
+        <div class="zone">
+          <div class="node">Plataforma CLM</div>
+          <div class="link"></div>
+          <div class="node solid">Portal de terceros</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Dos usuarios</h2>
+  <div class="prose"><p>El portal tenía un usuario distinto al del producto principal. Un usuario ocasional no necesitaba las herramientas del CLM, pensadas para el uso diario.</p></div>
+  <div class="scroll">
+    <table class="cmp">
+      <thead><tr><th scope="col"></th><th scope="col">Usuario interno</th><th scope="col">Usuario externo</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Frecuencia</th><td>Diaria</td><td>Ocasional</td></tr>
+        <tr><th scope="row">Objetivo</th><td>Gestionar el ciclo de vida completo del contrato</td><td>Revisar un documento concreto</td></tr>
+        <tr><th scope="row">Necesidades</th><td>El CLM completo</td><td>Solo lo que ese documento requiere</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose"><p><span class="label k">Decisión</span>En el squad partimos de los flujos del CLM y los recortamos a lo que el usuario externo necesitaba. El registro y el inicio de sesión, sin embargo, copiaban los del CLM. En ese momento, cambiarlos no pareció necesario. Ese es el flujo de acceso que rediseñé después.</p></div>
+  <figure class="shot">
+    <div class="panel"><img src="../../assets/img/third-party-portal/list.webp" width="1120" height="840" alt="Lista de documentos pendientes con la vista de un solo contrato encima." loading="lazy"></div>
+    <figcaption>Interfaz recreada con fines ilustrativos.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Proceso</h2>
+  <ol class="steps">
+    <li><span class="label">01</span><span>Entrevistas con usuarios</span></li>
+    <li><span class="label">02</span><span>Definición del alcance</span></li>
+    <li><span class="label">03</span><span>Wireframes y prototipo</span></li>
+    <li><span class="label">04</span><span>Pruebas de usabilidad</span></li>
+    <li><span class="label">05</span><span>Lanzamiento</span></li>
+    <li class="turn"><span class="label">Baja adopción tras el lanzamiento</span></li>
+    <li><span class="label">06</span><span>Diagnóstico con Mixpanel y Hotjar</span></li>
+    <li><span class="label">07</span><span>Rediseño del inicio de sesión: SSO y magic link</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Diagnóstico</h2>
+  <div class="prose"><p>Pocos usuarios externos iniciaban sesión en el portal, y menos aún volvían. El equipo presentó los datos de Mixpanel en una reunión y mostraban dónde abandonaba la gente. Revisé Hotjar para entender por qué.</p></div>
+  <div class="pairs">
+    <div><span class="label">Mixpanel</span><h3>Dónde</h3><p>El abandono se concentraba en el registro y el inicio de sesión.</p></div>
+    <div><span class="label">Hotjar</span><h3>Por qué</h3><p>Los usuarios pedían restablecer la contraseña o abandonaban el proceso.</p></div>
+  </div>
+  <div class="prose"><p>Para un usuario ocasional, la contraseña era la principal barrera de entrada.</p></div>
+</section>
+
+<section>
+  <h2>Sin contraseña</h2>
+  <div class="prose">
+    <p>Con esos datos, propuse eliminar la contraseña. Los usuarios inician sesión con un magic link, un enlace con token enviado a su correo, o con SSO, usando su cuenta de Google u Outlook.</p>
+    <p>Hay dos métodos porque el SSO no está disponible para todos los proveedores de correo. El magic link cubre esos casos.</p>
+  </div>
+  <div class="flows">
+    <svg class="flow" viewBox="30 70 620 870" role="img" aria-label="Flujo de inicio de sesión antes: siete pasos, dos decisiones y un posible abandono" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="aha" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs><text class="tt" x="40" y="100">Antes</text>
+<text class="lb" x="640" y="100" text-anchor="end">4+ PASOS · CON CONTRASEÑA</text>
+<line x1="40" y1="116.5" x2="640" y2="116.5" style="stroke:var(--hair)"/>
+<rect x="152.0" y="156" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="240" y="180.0" fill="#ffffff" text-anchor="middle">Recibe una invitación</text>
+<text class="nd" x="240" y="198.0" fill="#ffffff" text-anchor="middle">por correo</text>
+<path d="M240,212 L240,276" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<polygon points="240,276 320,320 240,364 160,320" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="240" y="316.0" fill="currentColor" text-anchor="middle">¿Tiene una</text>
+<text class="nd" x="240" y="334.0" fill="currentColor" text-anchor="middle">cuenta?</text>
+<path d="M320,320 L480,320 L480,380" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="332" y="312" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">NO</text>
+<rect x="392.5" y="380.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="404.0" fill="currentColor" text-anchor="middle">Recibe un correo para</text>
+<text class="nd" x="480" y="422.0" fill="currentColor" text-anchor="middle">crear una contraseña</text>
+<path d="M480,436 L480,468" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<rect x="392.5" y="468.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="492.0" fill="currentColor" text-anchor="middle">Vuelve a la plataforma</text>
+<text class="nd" x="480" y="510.0" fill="currentColor" text-anchor="middle">y crea una contraseña</text>
+<path d="M480,524 L480,556" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<rect x="392.5" y="556.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="589.0" fill="currentColor" text-anchor="middle">Confirma su correo</text>
+<path d="M480,612 L480,660 L328,660" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<path d="M240,364 L240,644" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="248" y="390" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">SÍ</text>
+<rect x="152.5" y="644.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="240" y="668.0" fill="currentColor" text-anchor="middle">Escribe su correo</text>
+<text class="nd" x="240" y="686.0" fill="currentColor" text-anchor="middle">y contraseña</text>
+<path d="M240,700 L240,736" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<polygon points="240,736 320,780 240,824 160,780" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="240" y="776.0" fill="currentColor" text-anchor="middle">¿Recuerda la</text>
+<text class="nd" x="240" y="794.0" fill="currentColor" text-anchor="middle">contraseña?</text>
+<path d="M320,780 L392,780" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="332" y="772" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">NO</text>
+<rect x="392.5" y="752.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="480" y="776.0" fill="currentColor" text-anchor="middle">Restablece la</text>
+<text class="nd" x="480" y="794.0" fill="currentColor" text-anchor="middle">contraseña</text>
+<path d="M568,780 L620,780 L620,688 L328,688" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="612" y="740" text-anchor="end" stroke="#ffffff" stroke-width="6" paint-order="stroke">REINTENTA</text>
+<path d="M480,808 L480,868" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="488" y="844" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">SE RINDE</text>
+<rect x="392.5" y="868.5" width="175" height="55" fill="#ffffff" stroke="currentColor" stroke-dasharray="4 4"/>
+<text class="nd" x="480" y="901.0" fill="currentColor" text-anchor="middle">Abandona</text>
+<path d="M240,824 L240,868" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#aha)"/>
+<text class="lb" x="248" y="850" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">SÍ</text>
+<rect x="152.0" y="868" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="240" y="901.0" fill="#ffffff" text-anchor="middle">Ve el documento</text>
+</svg>
+    <svg class="flow" viewBox="710 70 620 500" role="img" aria-label="Flujo de inicio de sesión después: un paso de inicio de sesión y una decisión según el método usado" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ahd" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
+<text class="tt" x="720" y="100">Después</text>
+<text class="lb" x="1320" y="100" text-anchor="end">SIN CONTRASEÑA</text>
+<line x1="720" y1="116.5" x2="1320" y2="116.5" style="stroke:var(--hair)"/>
+<rect x="832.0" y="156" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="920" y="180.0" fill="#ffffff" text-anchor="middle">Recibe una invitación</text>
+<text class="nd" x="920" y="198.0" fill="#ffffff" text-anchor="middle">por correo</text>
+<rect x="1072.0" y="156" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="1160" y="189.0" fill="#ffffff" text-anchor="middle">Vuelve otro día</text>
+<path d="M920,212 L920,276" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<path d="M1160,212 L1160,244 L920,244" fill="none" stroke="currentColor" stroke-width="1"/>
+<rect x="832.5" y="276.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="920" y="300.0" fill="currentColor" text-anchor="middle">Entra con magic link</text>
+<text class="nd" x="920" y="318.0" fill="currentColor" text-anchor="middle">o SSO (Google, Outlook)</text>
+<path d="M920,332 L920,368" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<polygon points="920,368 1008,412 920,456 832,412" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="920" y="408.0" fill="currentColor" text-anchor="middle">¿Primera vez o</text>
+<text class="nd" x="920" y="426.0" fill="currentColor" text-anchor="middle">mismo método?</text>
+<path d="M1008,412 L1072,412" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<text class="lb" x="1020" y="404" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">NO</text>
+<rect x="1072.5" y="384.5" width="175" height="55" style="fill:var(--surface)" stroke="none"/>
+<text class="nd" x="1160" y="408.0" fill="currentColor" text-anchor="middle">Aviso: entra con tu</text>
+<text class="nd" x="1160" y="426.0" fill="currentColor" text-anchor="middle">método original</text>
+<path d="M1160,384 L1160,304 L1008,304" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<text class="lb" x="1168" y="356" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">REINTENTA</text>
+<path d="M920,456 L920,500" fill="none" stroke="currentColor" stroke-width="1" marker-end="url(#ahd)"/>
+<text class="lb" x="928" y="482" text-anchor="start" stroke="#ffffff" stroke-width="6" paint-order="stroke">SÍ</text>
+<rect x="832.0" y="500" width="176" height="56" fill="currentColor"/>
+<text class="nd" x="920" y="533.0" fill="#ffffff" text-anchor="middle">Ve el documento</text>
+</svg>
+  </div>
+  <figure class="shot">
+    <div class="panel"><img src="../../assets/img/third-party-portal/signin.webp" width="1120" height="840" alt="Pantalla de inicio de sesión sin contraseña: el nombre del contrato, botones para continuar con Google u Outlook y la opción de recibir un enlace de acceso por correo electrónico." loading="lazy"></div>
+    <figcaption>Interfaz recreada con fines ilustrativos.</figcaption>
+  </figure>
+  <div class="prose">
+    <span class="label">Prototipo</span>
+    <p>Recorre el flujo sin contraseña: la invitación por correo, las tres formas de iniciar sesión, el aviso por usar un método distinto y la llegada al documento.</p>
+    <p>Este prototipo recrea el flujo rediseñado. No es la versión que probamos antes del lanzamiento. La vista del documento aparece como contexto y no forma parte de mi diseño.</p>
+    <a class="btn" href="#" data-todo="Prototype page">Ver prototipo ↗</a>
+  </div>
+</section>
+
+<section>
+  <h2>Lo que aprendí</h2>
+  <div class="prose">
+    <p>El diagnóstico me dejó una distinción que ahora aplico a todos los proyectos: un usuario ocasional tiene necesidades distintas a las de un usuario diario, más allá de usar el producto con menos frecuencia. La fricción que un usuario habitual supera una vez, un usuario ocasional la enfrenta en cada visita.</p>
+    <p>Con el mismo razonamiento, hoy llevaría la solución un paso más allá. En la versión final, cada usuario tenía que iniciar sesión siempre con el método con el que se registró por primera vez. Hoy lo identificaría por su correo sin importar el método, para que no tenga que recordar nada.</p>
+    <p>El prototipo que probamos antes del lanzamiento no pedía crear una cuenta, así que la fricción del registro nunca apareció en las pruebas. Hoy probaría con el registro real.</p>
+  </div>
+  <p class="small">Interfaces recreadas con fines ilustrativos. El diseño original está bajo NDA.</p>
+</section>
+</main>
+
+<footer class="next">
+  <div class="wrap">
+    <a href="../tecno-fast-rental/"><span class="label">Siguiente proyecto</span><span class="title title--xl">Tecno Fast Rental</span><span class="go">Ver caso <span aria-hidden="true">→</span></span></a>
+  </div>
+</footer>
+
+</body>
+</html>

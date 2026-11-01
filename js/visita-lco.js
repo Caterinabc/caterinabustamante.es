@@ -28,18 +28,23 @@
   var el=document.getElementById('pano'), SRC;
   if(!el) return;
   SRC=el.dataset.src;
-  if(!window.THREE){ el.style.background='url('+SRC+') center/cover'; return; }
+  var failed=false;
+  // Fallback when three.js, WebGL or the texture is unavailable: show the panorama as a still image
+  function still(){ failed=true; el.style.background='url('+SRC+') center/cover'; el.style.cursor='default'; el.classList.add('used'); var c=el.querySelector('canvas'); if(c) c.remove(); }
+  if(!window.THREE){ still(); return; }
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var renderer=new THREE.WebGLRenderer({antialias:true});
+  var renderer;
+  try{ renderer=new THREE.WebGLRenderer({antialias:true}); }catch(_){ still(); return; }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
   el.insertBefore(renderer.domElement,el.firstChild);
   var scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(80,2,0.1,100);
   var geo=new THREE.SphereGeometry(10,64,32); geo.scale(-1,1,1);
-  var tex=new THREE.TextureLoader().load(SRC,function(){ draw(); });
+  var tex=new THREE.TextureLoader().load(SRC,function(){ draw(); },undefined,still);
   if('encoding' in tex) tex.encoding=THREE.sRGBEncoding; renderer.outputEncoding=THREE.sRGBEncoding;
   scene.add(new THREE.Mesh(geo,new THREE.MeshBasicMaterial({map:tex})));
   var lon=170, lat=8, drag=null, used=false, visible=true, raf=0;
   function draw(){
+    if(failed) return;
     lat=Math.max(-85,Math.min(85,lat));
     var phi=THREE.MathUtils.degToRad(90-lat), th=THREE.MathUtils.degToRad(lon);
     camera.lookAt(Math.sin(phi)*Math.cos(th),Math.cos(phi),Math.sin(phi)*Math.sin(th));
@@ -47,7 +52,7 @@
   }
   function size(){ var w=el.clientWidth,h=el.clientHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); draw(); }
   function touch(){ if(!used){ used=true; el.classList.add('used'); } }
-  function spin(){ raf=0; if(used||reduce||!visible) return; lon+=0.04; draw(); raf=requestAnimationFrame(spin); }
+  function spin(){ raf=0; if(failed||used||reduce||!visible) return; lon+=0.04; draw(); raf=requestAnimationFrame(spin); }
   el.addEventListener('pointerdown',function(e){ drag={x:e.clientX,y:e.clientY,lon:lon,lat:lat}; touch(); try{el.setPointerCapture(e.pointerId);}catch(_){} });
   el.addEventListener('pointermove',function(e){ if(!drag) return; var k=camera.fov/el.clientHeight; lon=drag.lon-(e.clientX-drag.x)*k; lat=drag.lat+(e.clientY-drag.y)*k; draw(); });
   function end(){ drag=null; } el.addEventListener('pointerup',end); el.addEventListener('pointercancel',end);

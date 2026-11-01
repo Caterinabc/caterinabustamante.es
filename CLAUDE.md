@@ -4,7 +4,7 @@
 - Sitio estático HTML/CSS/JS, sin frameworks ni build step.
 - La raíz de este repo se publica tal cual en GitHub Pages, con el dominio propio caterinabustamante.es. Todo lo que se commitee es público, historial incluido: no guardar aquí nada que no deba serlo.
 - Material original en ../portfolio-material (solo lectura): páginas en portfolio-artefactos/, imágenes PNG en portfolio-imagenes-png/.
-- Los artefactos son referencia de contenido y diseño. Sus links a claude.ai no se copian: todo link interno es una ruta relativa del sitio.
+- Los artefactos son referencia de contenido y diseño. Sus links a claude.ai no se copian: todo link interno es una ruta relativa del sitio. Única excepción, decidida por Caterina: el botón "View prototype" de third-party-portal enlaza a su artefacto de claude.ai (debe estar compartido públicamente).
 
 ## Estructura y contenido
 - Inglés: /en/ (home) y /en/work/third-party-portal/, /en/work/tecno-fast-rental/, /en/work/image-processor/, /en/work/visita-lco/
@@ -38,4 +38,4 @@
 - No hay staging con contraseña: cualquier preview es público.
 - .htaccess no funciona en GitHub Pages: no crearlo.
 - Nunca incluir robots.txt con "Disallow: /".
-- Antes de lanzar: sin links rotos, sin links a claude.ai ni a "new.", y los puntos pendientes de la lista de memoria resueltos.
+- Antes de lanzar: sin links rotos, sin links a claude.ai (salvo el del prototipo) ni a "new.", y los puntos pendientes de la lista de memoria resueltos.

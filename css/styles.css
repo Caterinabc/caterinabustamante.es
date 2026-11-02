@@ -143,6 +143,17 @@ figure{display:flex;flex-direction:column;gap:var(--s12);min-width:0}
 .next a:hover .go span,.next a:focus-visible .go span{transform:translateX(6px)}
 .next a:focus-visible{outline-offset:-8px}
 
+/* Case contact: generic invitation placed just before the next-project band, same on every case.
+   A full-width blush band (token) that sits flush against the orange band; smaller than it on purpose:
+   body-size copy, shorter padding. To add a case-specific line later, put
+   <p class="small case-contact-note">…</p> after .case-contact-lead; no other change is needed. */
+.case-contact{background:var(--blush)}
+.case-contact-inner{display:flex;flex-direction:column;gap:var(--s24);padding-block:var(--s64)}
+.case-contact-lead{text-wrap:balance}
+.case-contact-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s8) var(--s24)}
+.case-contact-actions a:not(.btn){display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-position:from-font}
+@media (max-width:768px){.case-contact-inner{padding-block:var(--s48)}}
+
 /* Footer legal line */
 .legal{display:flex;justify-content:space-between;gap:var(--s16);flex-wrap:wrap;padding-top:var(--s16);border-top:1px solid var(--ink)}
 
@@ -171,7 +182,14 @@ a.more-link:hover h3{text-decoration:underline}
   .footer-links{align-items:flex-start}
   .email{font-size:20px;line-height:28px;word-break:break-all}
 }
-@media (max-width:480px){.projects{grid-template-columns:1fr;gap:var(--s48)}}
+/* Mobile: projects become a horizontal scroller. Two cards fit fully and a 16px sliver (same as the left margin) of the third shows
+   at the right edge. The list bleeds to the viewport edges and re-applies --margin as inner padding, so the
+   first card keeps the site's side padding. Vertical padding/margin keep hover lift and focus ring unclipped. */
+@media (max-width:768px){
+  .projects{display:flex;gap:var(--s16);margin-inline:calc(-1 * var(--margin));padding:var(--s8) var(--margin);margin-block:calc(-1 * var(--s8));overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--margin);overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .projects::-webkit-scrollbar{display:none}
+  .projects>li{flex:0 0 calc((100% - 32px) / 2);min-width:0;scroll-snap-align:start}
+}
 
 /* Case: third-party portal. Before/after ecosystem diagram */
 .eco{display:flex;flex-direction:column;gap:var(--s32);padding:var(--s32);background:var(--surface)}

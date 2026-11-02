@@ -19,14 +19,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
 
 <header class="wrap">
   <nav class="site-head" aria-label="Principal">
-    <a href="../../#work">Trabajo</a>
+    <a href="../../#work">Proyectos</a>
     <a class="name" href="../../">Caterina Bustamante</a>
     <div class="site-head-end">
       <a href="../../#contact">Contacto</a>
@@ -40,8 +40,9 @@
   <div class="intro-text">
     <span class="label">Caso de estudio · Diseño y desarrollo web</span>
     <h1>Visita LCO</h1>
-    <p class="lede">Para el 50.º aniversario de la primera luz del Observatorio Las Campanas, diseñé y desarrollé un recorrido virtual que recrea una noche de observación. El sitio abre áreas que normalmente están cerradas al público. En dos años llegó a 1900 usuarios en 52 países, y uno de cada cuatro completó el recorrido.</p>
   </div>
+  <div class="intro-cols">
+  <p class="lede">Para el 50.º aniversario de la primera luz del Observatorio Las Campanas, diseñé y desarrollé un recorrido virtual que recrea una noche de observación. El sitio abre áreas que normalmente están cerradas al público. En dos años llegó a 1900 usuarios en 52 países, y uno de cada cuatro completó el recorrido.</p>
   <dl class="meta">
     <div><dt class="label">Año</dt><dd>2021</dd></div>
     <div><dt class="label">Rol</dt><dd>Líder de diseño y desarrollo web</dd></div>
@@ -50,6 +51,7 @@
     <div><dt class="label">Herramientas</dt><dd>Panoramas 360°, compatibilidad con visores VR, Google Analytics</dd></div>
     <div class="wide"><dt class="label">Equipo</dt><dd>Dirección de arte y gestión de comunidad del observatorio, con diseño de sonido y el equipo de astronomía</dd></div>
   </dl>
+  </div>
   <figure class="tile cover"><img src="../../assets/img/visita-lco/01-portada.webp" width="1920" height="1441" alt="Visita LCO abierto en dos portátiles, con los telescopios Magallanes de noche."></figure>
 </div>
 
@@ -65,11 +67,11 @@
   <h2>Proceso</h2>
   <ol class="steps">
     <li class="turn"><span class="label">50 años de primera luz</span></li>
-    <li><span class="label">01</span><span>Alcance y objetivos</span></li>
-    <li><span class="label">02</span><span>Arquitectura de información</span></li>
-    <li><span class="label">03</span><span>Wireframes</span></li>
-    <li><span class="label">04</span><span>Fotografía y panoramas 360°</span></li>
-    <li><span class="label">05</span><span>Desarrollo e interacciones</span></li>
+    <li><span class="step-n">1</span><span>Alcance y objetivos</span></li>
+    <li><span class="step-n">2</span><span>Arquitectura de información</span></li>
+    <li><span class="step-n">3</span><span>Wireframes</span></li>
+    <li><span class="step-n">4</span><span>Fotografía y panoramas 360°</span></li>
+    <li><span class="step-n">5</span><span>Desarrollo e interacciones</span></li>
   </ol>
 </section>
 
@@ -78,14 +80,14 @@
   <div class="prose"><p>El recorrido sigue el orden de una noche real de observación, así que la navegación se lee como un viaje y no como un menú.</p></div>
   <div class="ia-legend" aria-hidden="true"><span><i class="sc"></i>Escena</span><span><i class="sub"></i>Subescena</span><span><i class="pop"></i>Ventana emergente</span><span><i class="vr"></i>Recorrido VR</span></div>
   <ol class="ia" aria-label="Arquitectura de información del recorrido, en orden">
-    <li class="ia-stage"><span class="label">01</span><span class="n sc">Inicio</span></li>
-    <li class="ia-stage"><span class="label">02</span><span class="n sc">Llegada al observatorio</span><span class="n pop">Info del observatorio</span></li>
-    <li class="ia-stage"><span class="label">03</span><span class="n sc">Camino a las cúpulas</span><span class="n sub">Actividad interactiva</span><span class="n pop">Info del sitio</span></li>
-    <li class="ia-stage"><span class="label">04</span><span class="n sc">Henrietta Swope</span><span class="n sub">Sala de control</span><span class="n pop">Info del telescopio</span><span class="n vr">Telescopio 1</span></li>
-    <li class="ia-stage"><span class="label">05</span><span class="n sc">Irénée du Pont</span><span class="n sub">Sala de control</span><span class="n pop">Info del telescopio</span><span class="n vr">Telescopio 2</span></li>
-    <li class="ia-stage"><span class="label">06</span><span class="n sc">Magallanes</span><span class="n sub">Sala de control</span><span class="n pop">Info de los telescopios</span><span class="n vr">Telescopios 3</span></li>
-    <li class="ia-stage"><span class="label">07</span><span class="n sc">Salida</span><span class="n sub">Observatorio del futuro</span><span class="n pop">Mensaje de cierre: proteger los cielos oscuros</span></li>
-    <li class="ia-stage"><span class="label">08</span><span class="n sc">Cierre</span><span class="n pop">Valoración</span></li>
+    <li class="ia-stage"><span class="step-n">1</span><span class="n sc">Inicio</span></li>
+    <li class="ia-stage"><span class="step-n">2</span><span class="n sc">Llegada al observatorio</span><span class="n pop">Info del observatorio</span></li>
+    <li class="ia-stage"><span class="step-n">3</span><span class="n sc">Camino a las cúpulas</span><span class="n sub">Actividad interactiva</span><span class="n pop">Info del sitio</span></li>
+    <li class="ia-stage"><span class="step-n">4</span><span class="n sc">Henrietta Swope</span><span class="n sub">Sala de control</span><span class="n pop">Info del telescopio</span><span class="n vr">Telescopio 1</span></li>
+    <li class="ia-stage"><span class="step-n">5</span><span class="n sc">Irénée du Pont</span><span class="n sub">Sala de control</span><span class="n pop">Info del telescopio</span><span class="n vr">Telescopio 2</span></li>
+    <li class="ia-stage"><span class="step-n">6</span><span class="n sc">Magallanes</span><span class="n sub">Sala de control</span><span class="n pop">Info de los telescopios</span><span class="n vr">Telescopios 3</span></li>
+    <li class="ia-stage"><span class="step-n">7</span><span class="n sc">Salida</span><span class="n sub">Observatorio del futuro</span><span class="n pop">Mensaje de cierre: proteger los cielos oscuros</span></li>
+    <li class="ia-stage"><span class="step-n">8</span><span class="n sc">Cierre</span><span class="n pop">Valoración</span></li>
   </ol>
   <p class="small">Arquitectura de información: ocho escenas en el orden de una noche de observación.</p>
   <div class="wf-grid">
@@ -171,8 +173,8 @@
   <div class="stats">
     <div class="stat"><span class="label">Alcance</span><b class="title title--s">1900</b><p>usuarios en dos años, empezando con 365 en el primer mes.</p></div>
     <div class="stat"><span class="label">Países</span><b class="title title--s">52</b><p>países alcanzados, frente a 19 en el primer mes.</p></div>
-    <div class="stat"><span class="label">Finalización</span><b class="title title--s">1 de cada 4</b><p>visitantes completaron el recorrido entero: 26,1&nbsp;% en dos años y 28,2&nbsp;% en el lanzamiento.</p></div>
-    <div class="stat"><span class="label">Participación</span><b class="title title--s">2 min 41 s</b><p>de participación media por visitante en dos años, para un recorrido autoguiado. Quienes visitaron en el mes de lanzamiento se quedaron 3 min 56 s.</p></div>
+    <div class="stat"><span class="label">Recorrido completo</span><b class="title title--s">1 de cada 4</b><p>visitantes completaron el recorrido entero: 26,1&nbsp;% en dos años y 28,2&nbsp;% en el lanzamiento.</p></div>
+    <div class="stat"><span class="label">Permanencia</span><b class="title title--s">2 min 41 s</b><p>de permanencia media por visitante en dos años, para un recorrido autoguiado. Quienes visitaron en el mes de lanzamiento se quedaron 3 min 56 s.</p></div>
     <div class="stat"><span class="label">Exploración</span><b class="title title--s">3,7</b><p>vistas por visitante de media, con 4,3 en el primer mes. Las personas recorrían varias escenas por visita.</p></div>
     <div class="stat"><span class="label">Contenido exclusivo</span><b class="title title--s">513</b><p>visitantes abrieron contenido disponible solo en el recorrido, con 1904 vistas. En el primer mes, 136 visitantes y 582 vistas.</p></div>
   </div>

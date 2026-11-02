@@ -19,14 +19,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
 
 <header class="wrap">
   <nav class="site-head" aria-label="Principal">
-    <a href="../../#work">Trabajo</a>
+    <a href="../../#work">Proyectos</a>
     <a class="name" href="../../">Caterina Bustamante</a>
     <div class="site-head-end">
       <a href="../../#contact">Contacto</a>
@@ -40,16 +40,18 @@
   <div class="intro-text">
     <span class="label">Caso de estudio · IA y automatización</span>
     <h1 class="title">Procesador de imágenes</h1>
-    <p class="lede">Mientras diseñaba desde cero un e-commerce para una empresa tradicional que se digitalizaba, encontré un cuello de botella en la preparación del catálogo: unas 1000 imágenes de producto debían cumplir las mismas especificaciones antes de publicarse. Con IA, construí una herramienta que procesa todo el lote en 4 minutos, se adapta a las especificaciones de cualquier plataforma y genera una imagen de superficie instalada cuando solo existen fotos de piezas sueltas.</p>
   </div>
+  <div class="intro-cols">
+  <p class="lede">Mientras diseñaba desde cero un <span class="nb">e-commerce</span> para una empresa tradicional que se digitalizaba, encontré un cuello de botella en la preparación del catálogo: unas 1000 imágenes de producto debían cumplir las mismas especificaciones antes de publicarse. Con IA, construí una herramienta que procesa todo el lote en 4 minutos, se adapta a las especificaciones de cualquier plataforma y genera una imagen del revestimiento instalado cuando solo existen fotos de piezas sueltas.</p>
   <dl class="meta">
     <div><dt class="label">Año</dt><dd>2025</dd></div>
     <div><dt class="label">Rol</dt><dd>UX/UI Designer, autoría de la herramienta</dd></div>
     <div><dt class="label">Producto</dt><dd>E-commerce de El Bodegón de la Cerámica</dd></div>
     <div><dt class="label">Equipo</dt><dd>Canal Cero, desarrollo y el cliente</dd></div>
-    <div><dt class="label">Enfoque</dt><dd>Design Ops, automatización, catálogo de e-commerce</dd></div>
+    <div><dt class="label">Enfoque</dt><dd>Design Ops, automatización, catálogo de <span class="nb">e-commerce</span></dd></div>
     <div><dt class="label">Herramientas</dt><dd>ChatGPT, Python, Google Colab</dd></div>
   </dl>
+  </div>
   <figure class="tile"><img src="../../assets/img/image-processor/hero.webp" width="1469" height="812" alt="Carpeta de salida en Google Drive con imágenes de baldosas procesadas junto al notebook de Colab que ejecuta el script."></figure>
 </div>
 
@@ -57,8 +59,8 @@
   <h2>El cuello de botella</h2>
   <div class="prose"><p>Preparar cada imagen implicaba repetir las mismas cinco acciones. La tarea no necesitaba una decisión de diseño distinta por archivo, solo aplicar las mismas reglas de forma consistente, así que la traté como un problema de flujo de trabajo.</p></div>
   <div class="cmpf" role="img" aria-label="Proceso manual: cinco acciones repetidas en cada una de las 1000 imágenes. Con el script: definir especificaciones, ejecutar y verificar, una vez por lote.">
-    <div><div class="cmpf-head"><span class="label">Manual</span><span class="label num">× 1000</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Abrir</span></li><li><span class="label">02</span><span>Redimensionar</span></li><li><span class="label">03</span><span>Centrar</span></li><li><span class="label">04</span><span>Exportar</span></li><li><span class="label">05</span><span>Revisar</span></li></ol></div>
-    <div class="cmpf-script"><div class="cmpf-head"><span class="label">Con el script</span><span class="label num">× 1 lote</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Definir especificaciones</span></li><li><span class="label">02</span><span>Ejecutar</span></li><li><span class="label">03</span><span>Verificar</span></li></ol></div>
+    <div><div class="cmpf-head"><span class="label">Manual</span><span class="label num">× 1000</span></div><ol class="cmpf-list"><li><span class="step-n">1</span><span>Abrir</span></li><li><span class="step-n">2</span><span>Redimensionar</span></li><li><span class="step-n">3</span><span>Centrar</span></li><li><span class="step-n">4</span><span>Exportar</span></li><li><span class="step-n">5</span><span>Revisar</span></li></ol></div>
+    <div class="cmpf-script"><div class="cmpf-head"><span class="label">Con el script</span><span class="label num">× 1 lote</span></div><ol class="cmpf-list"><li><span class="step-n">1</span><span>Definir especificaciones</span></li><li><span class="step-n">2</span><span>Ejecutar</span></li><li><span class="step-n">3</span><span>Verificar</span></li></ol></div>
   </div>
 </section>
 
@@ -66,15 +68,15 @@
   <h2>Por qué un script propio</h2>
   <div class="prose"><p>El script tenía que resolver varias tareas a la vez, y ninguna herramienta las cubría todas.</p></div>
   <ul class="reasons" aria-label="Motivos para un script propio">
-    <li class="reason"><h3>Imágenes de superficie</h3><p>Ninguna de las herramientas que probé podía armar una imagen de superficie instalada a partir de varias piezas.</p></li>
-    <li class="reason"><h3>Control de completitud</h3><p>Ninguna comprobaba que todas las imágenes se hubieran procesado.</p></li>
+    <li class="reason"><h3>Imágenes de revestimiento</h3><p>Ninguna de las herramientas que probé podía armar una imagen del revestimiento instalado a partir de varias piezas.</p></li>
+    <li class="reason"><h3>Control de que no falte ninguna</h3><p>Ninguna comprobaba que todas las imágenes se hubieran procesado.</p></li>
     <li class="reason"><h3>Configuración reutilizable</h3><p>Indicar los parámetros en un script era más simple que reconfigurar una herramienta cada vez.</p></li>
   </ul>
 </section>
 
 <section>
   <h2>Las reglas</h2>
-  <div class="prose"><p>El script se configura con las especificaciones de cada plataforma de e-commerce. Se consultan los requisitos de imagen de la plataforma y se indican como parámetros.</p></div>
+  <div class="prose"><p>El script se configura con las especificaciones de cada plataforma de <span class="nb">e-commerce</span>. Se consultan los requisitos de imagen de la plataforma y se indican como parámetros.</p></div>
   <div class="scroll">
     <table class="cmp">
       <thead><tr><th scope="col">Parámetro</th><th scope="col">En este proyecto</th></tr></thead>
@@ -96,13 +98,13 @@
   <h2>Hecho con IA</h2>
   <div class="prose"><p>Desarrollé el script con ChatGPT en unas dos horas de iteración. Definí las reglas, probé el resultado con muestras reales y ajusté hasta que coincidió. El script ejecuta esta secuencia en cada archivo, con los parámetros configurados.</p></div>
   <ol class="pipe" aria-label="Flujo del script: carpeta de entrada, convertir, redimensionar, centrar, comprimir hasta cumplir el tamaño máximo, verificar, carpeta de salida e informe">
-    <li class="pnode end"><span class="label">Entrada</span><b>Carpeta de Drive</b><span>Unas 1000 fotos</span></li>
-    <li class="pnode"><span class="label">01</span><b>Convertir</b><span>Al formato definido</span></li>
-    <li class="pnode"><span class="label">02</span><b>Redimensionar</b><span>Sin deformar</span></li>
-    <li class="pnode"><span class="label">03</span><b>Centrar</b><span>En un lienzo blanco 1:1</span></li>
-    <li class="pnode"><span class="label">04</span><b>Comprimir</b><span class="loop label"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6"/><path d="M13 2.5v2.5h-2.5"/></svg>Se repite hasta 300 KB</span></li>
-    <li class="pnode"><span class="label">05</span><b>Verificar</b><span>Compara entrada y salida</span></li>
-    <li class="pnode out"><span class="label">Salida</span><b>Imágenes listas</b><span>Más un informe de archivos faltantes</span></li>
+    <li class="pnode end"><span class="step-n" aria-hidden="true"></span><span class="label">Entrada</span><b>Carpeta de Drive</b><span>Unas 1000 fotos</span></li>
+    <li class="pnode"><span class="step-n">1</span><b>Convertir</b><span>Al formato definido</span></li>
+    <li class="pnode"><span class="step-n">2</span><b>Redimensionar</b><span>Sin deformar</span></li>
+    <li class="pnode"><span class="step-n">3</span><b>Centrar</b><span>En un lienzo blanco 1:1</span></li>
+    <li class="pnode"><span class="step-n">4</span><b>Comprimir</b><span class="loop label"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6"/><path d="M13 2.5v2.5h-2.5"/></svg>Se repite hasta 300 KB</span></li>
+    <li class="pnode"><span class="step-n">5</span><b>Verificar</b><span>Compara entrada y salida</span></li>
+    <li class="pnode out"><span class="step-n" aria-hidden="true"></span><span class="label">Salida</span><b>Imágenes listas</b><span>Más un informe de archivos faltantes</span></li>
   </ol>
 </section>
 
@@ -130,9 +132,9 @@
 </section>
 
 <section>
-  <h2>La imagen de superficie instalada</h2>
+  <h2>La imagen del revestimiento instalado</h2>
   <div class="prose">
-    <p>En cerámica, los clientes necesitan ver el producto instalado, pero los proveedores solían enviar solo fotos de piezas sueltas. Añadí una función que arma una imagen de la superficie instalada completa a partir de esas piezas.</p>
+    <p>En cerámica, los clientes necesitan ver el producto instalado, pero los proveedores solían enviar solo fotos de piezas sueltas. Agregué una función que arma una imagen del revestimiento instalado completo a partir de esas piezas.</p>
     <p>La disposición depende de las proporciones de la pieza, como en una instalación real:</p>
   </div>
   <div class="pats">
@@ -141,27 +143,27 @@
   </div>
   <div class="prose">
     <p>El resultado se recorta a 1:1 para usar el mismo formato que el resto del catálogo. Si las piezas no llenan la última fila, el script repite piezas del mismo conjunto para completarla.</p>
-    <p>La imagen de superficie instalada es una referencia, y el cliente lo sabía.</p>
+    <p>La imagen del revestimiento instalado es una referencia, y el cliente lo sabía.</p>
   </div>
   <figure>
     <div class="pf">
       <div class="pf-head"><span class="label">01 · Entrada</span><span class="label">Carpeta del proveedor · 6 piezas</span></div>
       <div class="pf-tiles"><img src="../../assets/img/image-processor/p1.webp" width="180" height="180" alt="Pieza 1"><img src="../../assets/img/image-processor/p2.webp" width="180" height="180" alt="Pieza 2"><img src="../../assets/img/image-processor/p3.webp" width="180" height="180" alt="Pieza 3"><img src="../../assets/img/image-processor/p4.webp" width="180" height="180" alt="Pieza 4"><img src="../../assets/img/image-processor/p5.webp" width="180" height="180" alt="Pieza 5"><img src="../../assets/img/image-processor/p6.webp" width="180" height="180" alt="Pieza 6"></div>
-      <div class="pf-head"><span class="label">02 · Salida</span><span class="label">Superficie instalada generada</span></div>
-      <img class="pf-pano" src="../../assets/img/image-processor/surface.webp" width="1120" height="747" alt="Imagen de superficie instalada generada a partir de las seis piezas" loading="lazy">
-      <div class="pf-head"><span class="label">03 · Página de producto</span><span class="label">Pieza, superficie, instalada</span></div>
-      <div class="an" role="img" aria-label="Galería de la página de producto de El Bodegón de la Cerámica: la pieza suelta, la imagen de superficie generada por el script y la foto instalada.">
+      <div class="pf-head"><span class="label">02 · Salida</span><span class="label">Revestimiento instalado generado</span></div>
+      <img class="pf-pano" src="../../assets/img/image-processor/surface.webp" width="1120" height="747" alt="Imagen del revestimiento instalado generada a partir de las seis piezas" loading="lazy">
+      <div class="pf-head"><span class="label">03 · Página de producto</span><span class="label">Pieza, revestimiento, instalado</span></div>
+      <div class="an" role="img" aria-label="Galería de la página de producto de El Bodegón de la Cerámica: la pieza suelta, la imagen del revestimiento generada por el script y la foto instalada.">
         <div class="mock"><div class="an-frame"><img class="an-f an-f1" src="../../assets/img/image-processor/g1.webp" width="1120" height="677" alt=""><img class="an-f an-f2" src="../../assets/img/image-processor/g2.webp" width="1120" height="677" alt=""><img class="an-f an-f3" src="../../assets/img/image-processor/g3.webp" width="1120" height="677" alt=""></div></div>
-        <div class="an-steps"><div class="an-s an-s1"><span class="an-bar"></span><span class="label">Pieza</span></div><div class="an-s an-s2"><span class="an-bar"></span><span class="label">Superficie · nueva</span></div><div class="an-s an-s3"><span class="an-bar"></span><span class="label">Instalada</span></div></div>
+        <div class="an-steps"><div class="an-s an-s1"><span class="an-bar"></span><span class="label">Pieza</span></div><div class="an-s an-s2"><span class="an-bar"></span><span class="label">Revestimiento · nuevo</span></div><div class="an-s an-s3"><span class="an-bar"></span><span class="label">Instalada</span></div></div>
       </div>
     </div>
-    <figcaption>Un producto que llegó sin imagen de superficie instalada. El script la generó a partir de las piezas sueltas del proveedor.</figcaption>
+    <figcaption>Un producto que llegó sin imagen del revestimiento instalado. El script la generó a partir de las piezas sueltas del proveedor.</figcaption>
   </figure>
 </section>
 
 <section>
   <h2>Lo que aprendí</h2>
-  <div class="prose"><p>Este proyecto extendió mi trabajo de diseño al proceso de producción. Cuando una tarea exige las mismas decisiones cientos de veces, las convierto en reglas explícitas y las automatizo. La IA acelera el desarrollo, pero definir las reglas y validar el resultado siguen siendo trabajo de diseño.</p></div>
+  <div class="prose"><p>Este proyecto amplió mi trabajo de diseño hasta el proceso de producción. Cuando una tarea exige las mismas decisiones cientos de veces, las convierto en reglas explícitas y las automatizo. La IA acelera el desarrollo, pero definir las reglas y validar el resultado siguen siendo trabajo de diseño.</p></div>
 </section>
 </main>
 

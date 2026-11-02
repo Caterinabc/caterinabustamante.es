@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="../../../css/styles.css">
 </head>
 <body>
@@ -40,8 +40,9 @@
   <div class="intro-text">
     <span class="label">Case study · UX/UI design</span>
     <h1 class="title">Tecno Fast Rental</h1>
-    <p class="lede">I redesigned the quote flow for Tecno Fast Rental, a company that rents and sells modular spaces to other businesses. The quote form had stopped receiving requests. I found 17 quote buttons on a single screen leading to different places, and unified them into a single quote cart.</p>
   </div>
+  <div class="intro-cols">
+  <p class="lede">I redesigned the quote flow for Tecno Fast Rental, a company that rents and sells modular spaces to other businesses. The quote form had stopped receiving requests. I found 17 quote buttons on a single screen leading to different places, and unified them into a single quote cart.</p>
   <dl class="meta">
     <div><dt class="label">Year</dt><dd>2025</dd></div>
     <div><dt class="label">Role</dt><dd>UX/UI Designer, sole designer on the project</dd></div>
@@ -51,6 +52,7 @@
     <div><dt class="label">Tools</dt><dd>Figma, Microsoft Clarity</dd></div>
     <div class="wide"><dt class="label">Focus</dt><dd>UX audit, information architecture, B2B quote flows, stakeholder management</dd></div>
   </dl>
+  </div>
   <figure class="tile" style="--w:110%"><img src="../../../assets/img/tecno-fast-rental/01-portada.webp" width="1317" height="600" alt="Redesigned product page with a single action, Agregar a la cotización (Add to quote), and the Módulo Protegido insurance as an add-on."></figure>
 </div>
 
@@ -264,12 +266,12 @@
   <h2>Process</h2>
   <ol class="steps">
     <li class="turn"><span class="label">The form stops receiving requests</span></li>
-    <li><span class="label">01</span><span>Walk through the site as a customer</span></li>
-    <li><span class="label">02</span><span>Predictive heatmaps with Microsoft Clarity</span></li>
-    <li><span class="label">03</span><span>Questionnaire for the sales team</span></li>
-    <li><span class="label">04</span><span>Single cart and form</span></li>
-    <li><span class="label">05</span><span>Cross-selling within the flow</span></li>
-    <li><span class="label">06</span><span>Validation with development and sales</span></li>
+    <li><span class="step-n">1</span><span>Walk through the site as a customer</span></li>
+    <li><span class="step-n">2</span><span>Predictive heatmaps with Microsoft Clarity</span></li>
+    <li><span class="step-n">3</span><span>Questionnaire for the sales team</span></li>
+    <li><span class="step-n">4</span><span>Single cart and form</span></li>
+    <li><span class="step-n">5</span><span>Cross-selling within the flow</span></li>
+    <li><span class="step-n">6</span><span>Validation with development and sales</span></li>
   </ol>
 </section>
 
@@ -298,7 +300,9 @@
     </table>
   </div>
   <div class="prose"><p><span class="label k">Decision</span>One form serves both. If the customer added products, the summary appears next to the form. If not, the empty cart tells them they can describe their project in the form, and a button takes them to the listing if they'd rather pick products. Customers who need guidance can send a request without going through the catalog.</p></div>
-  <div class="flow-solo"><svg class="flow" viewBox="30 20 620 640" role="img" aria-label="Quote form with two states: with products it shows the summary next to the form; without products it invites the customer to describe the project or go to the listing. Both end in a request for sales." xmlns="http://www.w3.org/2000/svg"><defs><marker id="ahN" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
+  <div class="group">
+  <div class="split">
+  <div class="flow-solo"><svg class="flow" viewBox="30 20 620 626" role="img" aria-label="Quote form with two states: with products it shows the summary next to the form; without products it invites the customer to describe the project or go to the listing. Both end in a request for sales." xmlns="http://www.w3.org/2000/svg"><defs><marker id="ahN" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
 <text class="lb" x="40" y="40" fill="currentColor" text-anchor="start">QUOTE FORM · TWO STATES</text>
 <text class="tt" x="40" y="100" fill="currentColor" text-anchor="start">With or without products</text>
 <text class="lb" x="640" y="100" fill="currentColor" text-anchor="end">ONE FORM</text>
@@ -332,8 +336,9 @@
 <rect x="252.0" y="588" width="176" height="56" fill="currentColor"/>
 <text class="nd" x="340" y="612" fill="#ffffff" text-anchor="middle">Sales receives</text>
 <text class="nd" x="340" y="630" fill="#ffffff" text-anchor="middle">the request</text></svg></div>
-  <figure class="shot"><div class="panel"><img src="../../../assets/img/tecno-fast-rental/03-carro-vacio.webp" width="1441" height="1040" alt="Empty cart with a notice inviting the customer to describe their project and an Agregar productos button that leads to the listing." loading="lazy"></div><figcaption>Empty cart: the notice invites customers to describe their project, and Agregar productos (Add products) leads to the listing.</figcaption></figure>
-  <p class="small">The proportions come from the sales team's perception, not from direct observation of users.</p>
+  <figure class="shot"><div class="panel"><img src="../../../assets/img/tecno-fast-rental/03-carro-vacio.webp" width="1441" height="1040" alt="Empty cart with a notice inviting the customer to describe their project and an Agregar productos button that leads to the listing." loading="lazy"></div></figure>
+  </div>
+  </div>
 </section>
 
 <section>

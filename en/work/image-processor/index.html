@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="../../../css/styles.css">
 </head>
 <body>
@@ -40,16 +40,18 @@
   <div class="intro-text">
     <span class="label">Case study · AI and automation</span>
     <h1 class="title">Image processor</h1>
-    <p class="lede">While designing an e-commerce site from scratch for a traditional company going digital, I found a bottleneck in catalog preparation: about 1,000 product images had to meet the same specifications before going live. With AI, I built a tool that processes the whole batch in 4 minutes, adapts to any platform's specifications and generates an installed-surface image when only photos of loose pieces exist.</p>
   </div>
+  <div class="intro-cols">
+  <p class="lede">While designing an <span class="nb">e-commerce</span> site from scratch for a traditional company going digital, I found a bottleneck in catalog preparation: about 1,000 product images had to meet the same specifications before going live. With AI, I built a tool that processes the whole batch in 4 minutes, adapts to any platform's specifications and generates an installed-surface image when only photos of loose pieces exist.</p>
   <dl class="meta">
     <div><dt class="label">Year</dt><dd>2025</dd></div>
     <div><dt class="label">Role</dt><dd>UX/UI Designer, author of the tool</dd></div>
     <div><dt class="label">Product</dt><dd>E-commerce for El Bodegón de la Cerámica</dd></div>
     <div><dt class="label">Team</dt><dd>Canal Cero, development and the client</dd></div>
-    <div><dt class="label">Focus</dt><dd>Design Ops, automation, e-commerce catalog</dd></div>
+    <div><dt class="label">Focus</dt><dd>Design Ops, automation, <span class="nb">e-commerce</span> catalog</dd></div>
     <div><dt class="label">Tools</dt><dd>ChatGPT, Python, Google Colab</dd></div>
   </dl>
+  </div>
   <figure class="tile"><img src="../../../assets/img/image-processor/hero.webp" width="1469" height="812" alt="Google Drive output folder with processed tile images next to the Colab notebook that runs the script."></figure>
 </div>
 
@@ -57,8 +59,8 @@
   <h2>The bottleneck</h2>
   <div class="prose"><p>Preparing each image meant repeating the same five actions. The task didn't need a different design decision per file, only the same rules applied consistently, so I treated it as a workflow problem.</p></div>
   <div class="cmpf" role="img" aria-label="Manual process: five actions repeated for each of the 1,000 images. With the script: define specifications, run and verify, once per batch.">
-    <div><div class="cmpf-head"><span class="label">Manual</span><span class="label num">× 1,000</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Open</span></li><li><span class="label">02</span><span>Resize</span></li><li><span class="label">03</span><span>Center</span></li><li><span class="label">04</span><span>Export</span></li><li><span class="label">05</span><span>Check</span></li></ol></div>
-    <div class="cmpf-script"><div class="cmpf-head"><span class="label">With the script</span><span class="label num">× 1 batch</span></div><ol class="cmpf-list"><li><span class="label">01</span><span>Define specifications</span></li><li><span class="label">02</span><span>Run</span></li><li><span class="label">03</span><span>Verify</span></li></ol></div>
+    <div><div class="cmpf-head"><span class="label">Manual</span><span class="label num">× 1,000</span></div><ol class="cmpf-list"><li><span class="step-n">1</span><span>Open</span></li><li><span class="step-n">2</span><span>Resize</span></li><li><span class="step-n">3</span><span>Center</span></li><li><span class="step-n">4</span><span>Export</span></li><li><span class="step-n">5</span><span>Check</span></li></ol></div>
+    <div class="cmpf-script"><div class="cmpf-head"><span class="label">With the script</span><span class="label num">× 1 batch</span></div><ol class="cmpf-list"><li><span class="step-n">1</span><span>Define specifications</span></li><li><span class="step-n">2</span><span>Run</span></li><li><span class="step-n">3</span><span>Verify</span></li></ol></div>
   </div>
 </section>
 
@@ -74,7 +76,7 @@
 
 <section>
   <h2>The rules</h2>
-  <div class="prose"><p>The script is configured with each e-commerce platform's specifications. You look up the platform's image requirements and enter them as parameters.</p></div>
+  <div class="prose"><p>The script is configured with each <span class="nb">e-commerce</span> platform's specifications. You look up the platform's image requirements and enter them as parameters.</p></div>
   <div class="scroll">
     <table class="cmp">
       <thead><tr><th scope="col">Parameter</th><th scope="col">In this project</th></tr></thead>
@@ -96,13 +98,13 @@
   <h2>Built with AI</h2>
   <div class="prose"><p>I developed the script with ChatGPT in about two hours of iteration. I defined the rules, tested the output on real samples and adjusted until the result matched. The script runs this sequence on each file, using the configured parameters.</p></div>
   <ol class="pipe" aria-label="Script flow: input folder, convert, resize, center, compress until it meets the max size, verify, output folder and report">
-    <li class="pnode end"><span class="label">Input</span><b>Drive folder</b><span>About 1,000 photos</span></li>
-    <li class="pnode"><span class="label">01</span><b>Convert</b><span>To the defined format</span></li>
-    <li class="pnode"><span class="label">02</span><b>Resize</b><span>Without distortion</span></li>
-    <li class="pnode"><span class="label">03</span><b>Center</b><span>On a white 1:1 canvas</span></li>
-    <li class="pnode"><span class="label">04</span><b>Compress</b><span class="loop label"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6"/><path d="M13 2.5v2.5h-2.5"/></svg>Repeats until 300 KB</span></li>
-    <li class="pnode"><span class="label">05</span><b>Verify</b><span>Compares input and output</span></li>
-    <li class="pnode out"><span class="label">Output</span><b>Ready images</b><span>Plus a report of missing files</span></li>
+    <li class="pnode end"><span class="step-n" aria-hidden="true"></span><span class="label">Input</span><b>Drive folder</b><span>About 1,000 photos</span></li>
+    <li class="pnode"><span class="step-n">1</span><b>Convert</b><span>To the defined format</span></li>
+    <li class="pnode"><span class="step-n">2</span><b>Resize</b><span>Without distortion</span></li>
+    <li class="pnode"><span class="step-n">3</span><b>Center</b><span>On a white 1:1 canvas</span></li>
+    <li class="pnode"><span class="step-n">4</span><b>Compress</b><span class="loop label"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6"/><path d="M13 2.5v2.5h-2.5"/></svg>Repeats until 300 KB</span></li>
+    <li class="pnode"><span class="step-n">5</span><b>Verify</b><span>Compares input and output</span></li>
+    <li class="pnode out"><span class="step-n" aria-hidden="true"></span><span class="label">Output</span><b>Ready images</b><span>Plus a report of missing files</span></li>
   </ol>
 </section>
 

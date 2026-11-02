@@ -9,7 +9,7 @@
 ## Estructura y contenido
 - Español en / y /work/<caso>/; inglés en /en/ y /en/work/<caso>/. Casos: third-party-portal, tecno-fast-rental, image-processor, visita-lco.
 - UX Partner no se publica. Tecno Fast Home es solo un link externo.
-- Ubicación: "Product Designer based in Spain. Open to remote roles." (ES: "Product Designer con base en España. Disponible para trabajo remoto."). Nunca "Barcelona / remote".
+- Ubicación: "Product Designer based in Spain. Open to remote roles." (ES: "Product Designer · España y remoto."). Nunca "Barcelona / remote".
 - No cambiar el tono ni los textos de los casos sin preguntar.
 
 ## Idiomas

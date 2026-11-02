@@ -19,14 +19,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
 
 <header class="wrap">
   <nav class="site-head" aria-label="Principal">
-    <a href="../../#work">Trabajo</a>
+    <a href="../../#work">Proyectos</a>
     <a class="name" href="../../">Caterina Bustamante</a>
     <div class="site-head-end">
       <a href="../../#contact">Contacto</a>
@@ -40,8 +40,9 @@
   <div class="intro-text">
     <span class="label">Caso de estudio · Diseño UX/UI</span>
     <h1 class="title">Tecno Fast Rental</h1>
-    <p class="lede">Rediseñé el flujo de cotización de Tecno Fast Rental, una empresa que alquila y vende espacios modulares a otras empresas. El formulario de cotización había dejado de recibir solicitudes. Encontré 17 botones de cotización en una sola pantalla que llevaban a lugares distintos, y los unifiqué en un único carrito de cotización.</p>
   </div>
+  <div class="intro-cols">
+  <p class="lede">Rediseñé el flujo de cotización de Tecno Fast Rental, una empresa que alquila y vende espacios modulares a otras empresas. El formulario de cotización había dejado de recibir solicitudes. Encontré 17 botones de cotización en una sola pantalla que llevaban a lugares distintos, y los unifiqué en un único carrito de cotización.</p>
   <dl class="meta">
     <div><dt class="label">Año</dt><dd>2025</dd></div>
     <div><dt class="label">Rol</dt><dd>UX/UI Designer, a cargo de todo el diseño del proyecto</dd></div>
@@ -51,6 +52,7 @@
     <div><dt class="label">Herramientas</dt><dd>Figma, Microsoft Clarity</dd></div>
     <div class="wide"><dt class="label">Enfoque</dt><dd>Auditoría UX, arquitectura de información, flujos de cotización B2B, gestión de stakeholders</dd></div>
   </dl>
+  </div>
   <figure class="tile" style="--w:110%"><img src="../../assets/img/tecno-fast-rental/01-portada.webp" width="1317" height="600" alt="Página de producto rediseñada con una única acción, Agregar a la cotización, y el seguro Módulo Protegido como complemento."></figure>
 </div>
 
@@ -264,12 +266,12 @@
   <h2>Proceso</h2>
   <ol class="steps">
     <li class="turn"><span class="label">El formulario deja de recibir solicitudes</span></li>
-    <li><span class="label">01</span><span>Recorrer el sitio como un cliente</span></li>
-    <li><span class="label">02</span><span>Mapas de calor predictivos con Microsoft Clarity</span></li>
-    <li><span class="label">03</span><span>Cuestionario para el equipo comercial</span></li>
-    <li><span class="label">04</span><span>Carrito y formulario únicos</span></li>
-    <li><span class="label">05</span><span>Venta cruzada dentro del flujo</span></li>
-    <li><span class="label">06</span><span>Validación con desarrollo y ventas</span></li>
+    <li><span class="step-n">1</span><span>Recorrer el sitio como un cliente</span></li>
+    <li><span class="step-n">2</span><span>Mapas de calor predictivos con Microsoft Clarity</span></li>
+    <li><span class="step-n">3</span><span>Cuestionario para el equipo comercial</span></li>
+    <li><span class="step-n">4</span><span>Carrito y formulario únicos</span></li>
+    <li><span class="step-n">5</span><span>Venta cruzada dentro del flujo</span></li>
+    <li><span class="step-n">6</span><span>Validación con desarrollo y ventas</span></li>
   </ol>
 </section>
 
@@ -298,7 +300,9 @@
     </table>
   </div>
   <div class="prose"><p><span class="label k">Decisión</span>Un solo formulario atiende a ambos. Si el cliente agregó productos, el resumen aparece junto al formulario. Si no, el carrito vacío le indica que puede describir su proyecto en el formulario, y un botón lo lleva al listado si prefiere elegir productos. Los clientes que necesitan orientación pueden enviar una solicitud sin pasar por el catálogo.</p></div>
-  <div class="flow-solo"><svg class="flow" viewBox="30 20 620 640" role="img" aria-label="Formulario de cotización con dos estados: con productos muestra el resumen junto al formulario; sin productos invita al cliente a describir el proyecto o a ir al listado. Ambos terminan en una solicitud para ventas." xmlns="http://www.w3.org/2000/svg"><defs><marker id="ahN" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
+  <div class="group">
+  <div class="split">
+  <div class="flow-solo"><svg class="flow" viewBox="30 20 620 626" role="img" aria-label="Formulario de cotización con dos estados: con productos muestra el resumen junto al formulario; sin productos invita al cliente a describir el proyecto o a ir al listado. Ambos terminan en una solicitud para ventas." xmlns="http://www.w3.org/2000/svg"><defs><marker id="ahN" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
 <text class="lb" x="40" y="40" fill="currentColor" text-anchor="start">FORMULARIO DE COTIZACIÓN · DOS ESTADOS</text>
 <text class="tt" x="40" y="100" fill="currentColor" text-anchor="start">Con o sin productos</text>
 <text class="lb" x="640" y="100" fill="currentColor" text-anchor="end">UN FORMULARIO</text>
@@ -332,13 +336,14 @@
 <rect x="252.0" y="588" width="176" height="56" fill="currentColor"/>
 <text class="nd" x="340" y="612" fill="#ffffff" text-anchor="middle">Ventas recibe</text>
 <text class="nd" x="340" y="630" fill="#ffffff" text-anchor="middle">la solicitud</text></svg></div>
-  <figure class="shot"><div class="panel"><img src="../../assets/img/tecno-fast-rental/03-carro-vacio.webp" width="1441" height="1040" alt="Carrito vacío con un aviso que invita al cliente a describir su proyecto y un botón Agregar productos que lleva al listado." loading="lazy"></div><figcaption>Carrito vacío: el aviso invita a los clientes a describir su proyecto, y Agregar productos lleva al listado.</figcaption></figure>
-  <p class="small">Las proporciones provienen de la percepción del equipo comercial, no de la observación directa de usuarios.</p>
+  <figure class="shot"><div class="panel"><img src="../../assets/img/tecno-fast-rental/03-carro-vacio.webp" width="1441" height="1040" alt="Carrito vacío con un aviso que invita al cliente a describir su proyecto y un botón Agregar productos que lleva al listado." loading="lazy"></div></figure>
+  </div>
+  </div>
 </section>
 
 <section>
   <h2>Un solo carrito</h2>
-  <div class="prose"><p>Cada tarjeta y cada página de producto tiene una sola acción: Agregar a la cotización. Todo lleva a un único formulario, con el resumen de productos a la vista. Los productos viajan con la solicitud, así que el ejecutivo comercial sabe qué cotizar antes de llamar. El botón de cotización del encabezado muestra cuántos productos ha agregado el cliente.</p></div>
+  <div class="prose"><p>Cada tarjeta y cada página de producto tiene una sola acción: Agregar a la cotización. Todo lleva a un único formulario, con el resumen de productos a la vista. Los productos van incluidos en la solicitud, así que el ejecutivo comercial sabe qué cotizar antes de llamar. El botón de cotización del encabezado muestra cuántos productos ha agregado el cliente.</p></div>
   <div class="flows">
     <svg class="flow" viewBox="30 20 620 750" role="img" aria-label="Flujo de cotización antes: los seis tipos de botón llevan a tres formularios, uno de ellos en otro sitio, con campos distintos y posible abandono." xmlns="http://www.w3.org/2000/svg"><defs><marker id="ahA" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
 <text class="lb" x="40" y="40" fill="currentColor" text-anchor="start">FLUJO DE COTIZACIÓN · CLIENTE B2B</text>
@@ -426,8 +431,8 @@
   </div>
   <div class="prose"><p>En la página de producto, la ficha técnica, el plano y el recorrido 3D están en la misma vista que la acción de cotizar. En la venta consultiva, un cliente que entiende lo que pide envía una solicitud más útil.</p></div>
   <figure class="shot"><div class="panel"><img src="../../assets/img/tecno-fast-rental/04-listado-y-ficha.webp" width="1600" height="1121" alt="Listado y página de producto rediseñados. Cada producto tiene una sola acción, y la página de producto muestra la ficha técnica, el plano y el recorrido 3D." loading="lazy"></div><figcaption>Listado y página de producto rediseñados. Cada producto tiene una sola acción, y la página de producto muestra la ficha técnica, el plano y el recorrido 3D.</figcaption></figure>
-  <figure class="shot"><div class="panel"><img src="../../assets/img/tecno-fast-rental/05-formulario-con-carrito.webp" width="1441" height="1040" alt="Formulario de cotización con el carrito: los productos y el Módulo Protegido viajan con la solicitud." loading="lazy"></div><figcaption>Formulario con carrito: los productos y el seguro Módulo Protegido viajan con la solicitud.</figcaption></figure>
-  <div class="prose"><p><span class="label k">Venta cruzada</span>Un módulo casi nunca se cotiza solo. El seguro Módulo Protegido aparece como complemento en la página de producto, y los packs de mobiliario se ofrecen junto a los módulos compatibles. La cotización gana valor sin añadir pasos.</p></div>
+  <figure class="shot"><div class="panel"><img src="../../assets/img/tecno-fast-rental/05-formulario-con-carrito.webp" width="1441" height="1040" alt="Formulario de cotización con el carrito: los productos y el Módulo Protegido van incluidos en la solicitud." loading="lazy"></div><figcaption>Formulario con carrito: los productos y el seguro Módulo Protegido van incluidos en la solicitud.</figcaption></figure>
+  <div class="prose"><p><span class="label k">Venta cruzada</span>Un módulo casi nunca se cotiza solo. El seguro Módulo Protegido aparece como complemento en la página de producto, y los packs de mobiliario se ofrecen junto a los módulos compatibles. La cotización gana valor sin agregar pasos.</p></div>
   <figure class="shot"><div class="panel"><img src="../../assets/img/tecno-fast-rental/06-packs-mobiliario.webp" width="1441" height="1260" alt="Página de un pack de mobiliario, disponible junto a los módulos compatibles." loading="lazy"></div><figcaption>Una página de pack de mobiliario, ofrecida junto a los módulos compatibles.</figcaption></figure>
 </section>
 

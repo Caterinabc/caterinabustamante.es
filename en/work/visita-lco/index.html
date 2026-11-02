@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="../../../css/styles.css">
 </head>
 <body>
@@ -40,8 +40,9 @@
   <div class="intro-text">
     <span class="label">Case study · Web design and development</span>
     <h1>Visita LCO</h1>
-    <p class="lede">For the 50th anniversary of first light at Las Campanas Observatory, I designed and built a virtual tour that recreates a night of observation. The site opens up areas that are normally closed to the public. In two years it reached 1,900 users in 52 countries, and one in four completed the tour.</p>
   </div>
+  <div class="intro-cols">
+  <p class="lede">For the 50th anniversary of first light at Las Campanas Observatory, I designed and built a virtual tour that recreates a night of observation. The site opens up areas that are normally closed to the public. In two years it reached 1,900 users in 52 countries, and one in four completed the tour.</p>
   <dl class="meta">
     <div><dt class="label">Year</dt><dd>2021</dd></div>
     <div><dt class="label">Role</dt><dd>Lead web designer and developer</dd></div>
@@ -50,6 +51,7 @@
     <div><dt class="label">Tools</dt><dd>360° panoramas, VR headset support, Google Analytics</dd></div>
     <div class="wide"><dt class="label">Team</dt><dd>The observatory's art director and community manager, with a sound designer and astronomers</dd></div>
   </dl>
+  </div>
   <figure class="tile cover"><img src="../../../assets/img/visita-lco/01-portada.webp" width="1920" height="1441" alt="Visita LCO open on two laptops, showing the Magellan telescopes at night."></figure>
 </div>
 
@@ -65,11 +67,11 @@
   <h2>Process</h2>
   <ol class="steps">
     <li class="turn"><span class="label">50 years of first light</span></li>
-    <li><span class="label">01</span><span>Scope and goals</span></li>
-    <li><span class="label">02</span><span>Information architecture</span></li>
-    <li><span class="label">03</span><span>Wireframes</span></li>
-    <li><span class="label">04</span><span>Photography and 360° panoramas</span></li>
-    <li><span class="label">05</span><span>Development and interactions</span></li>
+    <li><span class="step-n">1</span><span>Scope and goals</span></li>
+    <li><span class="step-n">2</span><span>Information architecture</span></li>
+    <li><span class="step-n">3</span><span>Wireframes</span></li>
+    <li><span class="step-n">4</span><span>Photography and 360° panoramas</span></li>
+    <li><span class="step-n">5</span><span>Development and interactions</span></li>
   </ol>
 </section>
 
@@ -78,14 +80,14 @@
   <div class="prose"><p>The tour follows the order of a real night of observation, so the navigation reads as a journey instead of a menu.</p></div>
   <div class="ia-legend" aria-hidden="true"><span><i class="sc"></i>Scene</span><span><i class="sub"></i>Sub-scene</span><span><i class="pop"></i>Pop-up</span><span><i class="vr"></i>VR tour</span></div>
   <ol class="ia" aria-label="Information architecture of the tour, in order">
-    <li class="ia-stage"><span class="label">01</span><span class="n sc">Start</span></li>
-    <li class="ia-stage"><span class="label">02</span><span class="n sc">Arrival at the observatory</span><span class="n pop">Observatory info</span></li>
-    <li class="ia-stage"><span class="label">03</span><span class="n sc">Path to the domes</span><span class="n sub">Interactive activity</span><span class="n pop">Site info</span></li>
-    <li class="ia-stage"><span class="label">04</span><span class="n sc">Henrietta Swope</span><span class="n sub">Control room</span><span class="n pop">Telescope info</span><span class="n vr">Telescope 1</span></li>
-    <li class="ia-stage"><span class="label">05</span><span class="n sc">Irénée du Pont</span><span class="n sub">Control room</span><span class="n pop">Telescope info</span><span class="n vr">Telescope 2</span></li>
-    <li class="ia-stage"><span class="label">06</span><span class="n sc">Magellan</span><span class="n sub">Control room</span><span class="n pop">Telescopes info</span><span class="n vr">Telescopes 3</span></li>
-    <li class="ia-stage"><span class="label">07</span><span class="n sc">Exit</span><span class="n sub">Future observatory</span><span class="n pop">Closing message: protect dark skies</span></li>
-    <li class="ia-stage"><span class="label">08</span><span class="n sc">Close</span><span class="n pop">Review</span></li>
+    <li class="ia-stage"><span class="step-n">1</span><span class="n sc">Start</span></li>
+    <li class="ia-stage"><span class="step-n">2</span><span class="n sc">Arrival at the observatory</span><span class="n pop">Observatory info</span></li>
+    <li class="ia-stage"><span class="step-n">3</span><span class="n sc">Path to the domes</span><span class="n sub">Interactive activity</span><span class="n pop">Site info</span></li>
+    <li class="ia-stage"><span class="step-n">4</span><span class="n sc">Henrietta Swope</span><span class="n sub">Control room</span><span class="n pop">Telescope info</span><span class="n vr">Telescope 1</span></li>
+    <li class="ia-stage"><span class="step-n">5</span><span class="n sc">Irénée du Pont</span><span class="n sub">Control room</span><span class="n pop">Telescope info</span><span class="n vr">Telescope 2</span></li>
+    <li class="ia-stage"><span class="step-n">6</span><span class="n sc">Magellan</span><span class="n sub">Control room</span><span class="n pop">Telescopes info</span><span class="n vr">Telescopes 3</span></li>
+    <li class="ia-stage"><span class="step-n">7</span><span class="n sc">Exit</span><span class="n sub">Future observatory</span><span class="n pop">Closing message: protect dark skies</span></li>
+    <li class="ia-stage"><span class="step-n">8</span><span class="n sc">Close</span><span class="n pop">Review</span></li>
   </ol>
   <p class="small">Information architecture: eight scenes in the order of a night of observation.</p>
   <div class="wf-grid">

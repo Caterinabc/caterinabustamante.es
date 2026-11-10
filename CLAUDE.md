@@ -2,7 +2,7 @@
 
 ## Proyecto
 - Sitio estático HTML/CSS/JS, sin frameworks ni build step.
-- Se publica tal cual desde la raíz en GitHub Pages, con el dominio caterinabustamante.es. Todo lo que se commitee es público: no guardar aquí nada que no deba serlo.
+- Se publica tal cual desde la raíz en GitHub Pages, con el dominio caterina.work. Todo lo que se commitee es público: no guardar aquí nada que no deba serlo.
 - Material original en ../portfolio-material (solo lectura): páginas en portfolio-artefactos/, imágenes PNG en portfolio-imagenes-png/. Es referencia de contenido y diseño.
 - Links internos siempre relativos. No se copian links a claude.ai; única excepción: el botón del prototipo de third-party-portal.
 
@@ -19,7 +19,7 @@
 - Español: tuteo en la interfaz y redacción neutra en cuanto a género donde sea posible.
 
 ## Reglas técnicas
-- Solo canonical, hreflang y Open Graph llevan URL absoluta, siempre https://caterinabustamante.es.
+- Solo canonical, hreflang y Open Graph llevan URL absoluta, siempre https://caterina.work.
 - Nombres de archivo en minúsculas, sin espacios ni tildes.
 - Estilos compartidos en un solo CSS con tokens. Nada de estilos duplicados por página.
 - Imágenes en WebP comprimidas, con alt en el idioma de la página. Excepción: las imágenes Open Graph van en JPG por compatibilidad con redes.
@@ -29,6 +29,6 @@
 - Revisar a 375, 768 y 1280 px y mostrar capturas antes de dar algo por terminado.
 
 ## Publicación
-- CNAME (caterinabustamante.es) y .nojekyll deben existir en la raíz y no estar en .gitignore.
+- CNAME (caterina.work) y .nojekyll deben existir en la raíz y no estar en .gitignore.
 - Nunca incluir robots.txt con "Disallow: /".
 - Antes de lanzar: sin links rotos y sin links a claude.ai (salvo el del prototipo).
